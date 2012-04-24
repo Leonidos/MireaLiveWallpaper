@@ -1,0 +1,7 @@
+bin/
+gen/
+doc/
+.metadata
+.settings
+.DS_Store
+.project

@@ -1,0 +1,2384 @@
+com.badlogic.gdx.Application:
+    public abstract com.badlogic.gdx.Graphics getGraphics()
+    public abstract com.badlogic.gdx.Audio getAudio()
+    public abstract com.badlogic.gdx.Input getInput()
+    public abstract com.badlogic.gdx.Files getFiles()
+    public abstract void log(java.lang.String,java.lang.String,java.lang.Exception)
+    public abstract com.badlogic.gdx.Application$ApplicationType getType()
+    public abstract int getVersion()
+    public abstract long getJavaHeap()
+    public abstract long getNativeHeap()
+    public abstract com.badlogic.gdx.Preferences getPreferences(java.lang.String)
+    public abstract void postRunnable(java.lang.Runnable)
+com.badlogic.gdx.Application$ApplicationType
+com.badlogic.gdx.Audio:
+    public abstract com.badlogic.gdx.audio.AudioDevice newAudioDevice(int,boolean)
+    public abstract com.badlogic.gdx.audio.AudioRecorder newAudioRecoder(int,boolean)
+    public abstract com.badlogic.gdx.audio.Sound newSound(com.badlogic.gdx.files.FileHandle)
+    public abstract com.badlogic.gdx.audio.Music newMusic(com.badlogic.gdx.files.FileHandle)
+com.badlogic.gdx.Files:
+    public abstract com.badlogic.gdx.files.FileHandle getFileHandle(java.lang.String,com.badlogic.gdx.Files$FileType)
+    public abstract com.badlogic.gdx.files.FileHandle classpath(java.lang.String)
+    public abstract com.badlogic.gdx.files.FileHandle external(java.lang.String)
+    public abstract com.badlogic.gdx.files.FileHandle absolute(java.lang.String)
+    public abstract boolean isExternalStorageAvailable()
+com.badlogic.gdx.Game
+com.badlogic.gdx.Graphics:
+    public abstract boolean isGL11Available()
+    public abstract com.badlogic.gdx.graphics.GLCommon getGLCommon()
+    public abstract com.badlogic.gdx.graphics.GLU getGLU()
+    public abstract int getFramesPerSecond()
+    public abstract com.badlogic.gdx.Graphics$GraphicsType getType()
+    public abstract float getPpiX()
+    public abstract float getPpiY()
+    public abstract float getPpcX()
+    public abstract float getPpcY()
+    public abstract boolean supportsDisplayModeChange()
+    public abstract com.badlogic.gdx.Graphics$DisplayMode[] getDisplayModes()
+    public abstract boolean setDisplayMode(com.badlogic.gdx.Graphics$DisplayMode)
+    public abstract void setTitle(java.lang.String)
+    public abstract void setIcon(com.badlogic.gdx.graphics.Pixmap)
+com.badlogic.gdx.Graphics$DisplayMode
+com.badlogic.gdx.Graphics$GraphicsType
+com.badlogic.gdx.Input:
+    public abstract float getAccelerometerZ()
+    public abstract int getX()
+    public abstract int getX(int)
+    public abstract int getY()
+    public abstract int getY(int)
+    public abstract boolean isTouched()
+    public abstract boolean justTouched()
+    public abstract boolean isTouched(int)
+    public abstract boolean isButtonPressed(int)
+    public abstract boolean isKeyPressed(int)
+    public abstract void getTextInput(com.badlogic.gdx.Input$TextInputListener,java.lang.String,java.lang.String)
+    public abstract void setOnscreenKeyboardVisible(boolean)
+    public abstract void vibrate(int)
+    public abstract void vibrate(long[],int)
+    public abstract void cancelVibrate()
+    public abstract float getAzimuth()
+    public abstract float getPitch()
+    public abstract float getRoll()
+    public abstract void setCatchBackKey(boolean)
+    public abstract void setInputProcessor(com.badlogic.gdx.InputProcessor)
+    public abstract com.badlogic.gdx.InputProcessor getInputProcessor()
+    public abstract boolean isPeripheralAvailable(com.badlogic.gdx.Input$Peripheral)
+com.badlogic.gdx.Input$Buttons
+com.badlogic.gdx.Input$Keys
+com.badlogic.gdx.Input$Peripheral
+com.badlogic.gdx.Input$TextInputListener
+com.badlogic.gdx.InputAdapter
+com.badlogic.gdx.InputMultiplexer
+com.badlogic.gdx.InputProcessor:
+    public abstract boolean touchMoved(int,int)
+    public abstract boolean scrolled(int)
+com.badlogic.gdx.Preferences
+com.badlogic.gdx.Screen
+com.badlogic.gdx.audio.AudioDevice
+com.badlogic.gdx.audio.AudioRecorder
+com.badlogic.gdx.audio.Music
+com.badlogic.gdx.audio.Sound
+com.badlogic.gdx.audio.analysis.AudioTools
+com.badlogic.gdx.audio.analysis.DFT
+com.badlogic.gdx.audio.analysis.FFT
+com.badlogic.gdx.audio.analysis.FourierTransform
+com.badlogic.gdx.audio.analysis.KissFFT
+com.badlogic.gdx.audio.analysis.NativeFFT
+com.badlogic.gdx.audio.analysis.ThresholdFunction
+com.badlogic.gdx.audio.io.Decoder
+com.badlogic.gdx.audio.io.Mpg123Decoder
+com.badlogic.gdx.audio.io.VorbisDecoder
+com.badlogic.gdx.backends.android.AndroidApplication:
+    protected android.os.Handler handler
+    84:87:public void initialize(com.badlogic.gdx.ApplicationListener,boolean)
+    102:120:public void initialize(com.badlogic.gdx.ApplicationListener,com.badlogic.gdx.backends.android.AndroidApplicationConfiguration)
+    123:125:protected android.widget.FrameLayout$LayoutParams createLayoutParams()
+    129:133:protected void createWakeLock(com.badlogic.gdx.backends.android.AndroidApplicationConfiguration)
+    149:151:public android.view.View initializeForView(com.badlogic.gdx.ApplicationListener,boolean)
+    169:183:public android.view.View initializeForView(com.badlogic.gdx.ApplicationListener,com.badlogic.gdx.backends.android.AndroidApplicationConfiguration)
+    284:284:public com.badlogic.gdx.Application$ApplicationType getType()
+    292:292:public int getVersion()
+    297:297:public long getJavaHeap()
+    302:302:public long getNativeHeap()
+    306:306:public com.badlogic.gdx.Preferences getPreferences(java.lang.String)
+    310:313:public void postRunnable(java.lang.Runnable)
+    323:324:public void log(java.lang.String,java.lang.String,java.lang.Exception)
+com.badlogic.gdx.backends.android.AndroidAudio:
+    private final android.media.AudioManager manager
+    50:54:public AndroidAudio(android.app.Activity)
+    77:77:public com.badlogic.gdx.audio.AudioDevice newAudioDevice(int,boolean)
+    84:109:public com.badlogic.gdx.audio.Music newMusic(com.badlogic.gdx.files.FileHandle)
+    119:134:public com.badlogic.gdx.audio.Sound newSound(com.badlogic.gdx.files.FileHandle)
+    143:143:public com.badlogic.gdx.audio.AudioRecorder newAudioRecoder(int,boolean)
+com.badlogic.gdx.backends.android.AndroidAudioDevice
+com.badlogic.gdx.backends.android.AndroidAudioRecorder
+com.badlogic.gdx.backends.android.AndroidFileHandle:
+    75:86:public com.badlogic.gdx.files.FileHandle[] list()
+    90:97:public boolean isDirectory()
+    101:114:public boolean exists()
+com.badlogic.gdx.backends.android.AndroidFiles:
+    37:37:public com.badlogic.gdx.files.FileHandle getFileHandle(java.lang.String,com.badlogic.gdx.Files$FileType)
+    41:41:public com.badlogic.gdx.files.FileHandle classpath(java.lang.String)
+    49:49:public com.badlogic.gdx.files.FileHandle external(java.lang.String)
+    53:53:public com.badlogic.gdx.files.FileHandle absolute(java.lang.String)
+    61:61:public boolean isExternalStorageAvailable()
+com.badlogic.gdx.backends.android.AndroidGL10:
+    37:38:public final void glActiveTexture(int)
+    41:42:public final void glAlphaFunc(int,float)
+    61:62:public final void glClearDepthf(float)
+    65:66:public final void glClearStencil(int)
+    77:78:public final void glColorMask(boolean,boolean,boolean,boolean)
+    86:87:public final void glCompressedTexImage2D(int,int,int,int,int,int,int,java.nio.Buffer)
+    91:92:public final void glCompressedTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+    96:97:public final void glCopyTexImage2D(int,int,int,int,int,int,int,int)
+    101:102:public final void glCopyTexSubImage2D(int,int,int,int,int,int,int,int)
+    105:106:public final void glCullFace(int)
+    113:114:public final void glDepthFunc(int)
+    121:122:public final void glDepthRangef(float,float)
+    149:150:public final void glFinish()
+    153:154:public final void glFlush()
+    157:158:public final void glFogf(int,float)
+    161:162:public final void glFogfv(int,java.nio.FloatBuffer)
+    165:166:public final void glFrontFace(int)
+    169:170:public final void glFrustumf(float,float,float,float,float,float)
+    177:177:public final int glGetError()
+    181:182:public final void glGetIntegerv(int,java.nio.IntBuffer)
+    185:185:public final java.lang.String glGetString(int)
+    189:190:public final void glHint(int,int)
+    193:194:public final void glLightModelf(int,float)
+    197:198:public final void glLightModelfv(int,java.nio.FloatBuffer)
+    201:202:public final void glLightf(int,int,float)
+    205:206:public final void glLightfv(int,int,java.nio.FloatBuffer)
+    209:210:public final void glLineWidth(float)
+    213:214:public final void glLoadIdentity()
+    217:218:public final void glLoadMatrixf(java.nio.FloatBuffer)
+    221:222:public final void glLogicOp(int)
+    225:226:public final void glMaterialf(int,int,float)
+    229:230:public final void glMaterialfv(int,int,java.nio.FloatBuffer)
+    237:238:public final void glMultMatrixf(java.nio.FloatBuffer)
+    241:242:public final void glMultiTexCoord4f(int,float,float,float,float)
+    245:246:public final void glNormal3f(float,float,float)
+    253:254:public final void glOrthof(float,float,float,float,float,float)
+    257:258:public final void glPixelStorei(int,int)
+    261:262:public final void glPointSize(float)
+    265:266:public final void glPolygonOffset(float,float)
+    277:278:public final void glReadPixels(int,int,int,int,int,int,java.nio.Buffer)
+    281:282:public final void glRotatef(float,float,float,float)
+    285:286:public final void glSampleCoverage(float,boolean)
+    289:290:public final void glScalef(float,float,float)
+    293:294:public final void glScissor(int,int,int,int)
+    297:298:public final void glShadeModel(int)
+    301:302:public final void glStencilFunc(int,int,int)
+    305:306:public final void glStencilMask(int)
+    309:310:public final void glStencilOp(int,int,int)
+    317:318:public final void glTexEnvf(int,int,float)
+    321:322:public final void glTexEnvfv(int,int,java.nio.FloatBuffer)
+    335:336:public final void glTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+    351:352:public final void glDeleteTextures(int,int[],int)
+    355:356:public final void glFogfv(int,float[],int)
+    359:360:public final void glGenTextures(int,int[],int)
+    363:364:public final void glGetIntegerv(int,int[],int)
+    367:368:public final void glLightModelfv(int,float[],int)
+    371:372:public final void glLightfv(int,int,float[],int)
+    379:380:public final void glMaterialfv(int,int,float[],int)
+    387:388:public final void glTexEnvfv(int,int,float[],int)
+    392:392:public void glPolygonMode(int,int)
+com.badlogic.gdx.backends.android.AndroidGL11:
+    53:54:public void glClipPlanef(int,java.nio.FloatBuffer)
+    57:58:public void glColor4ub(byte,byte,byte,byte)
+    61:62:public void glDeleteBuffers(int,java.nio.IntBuffer)
+    69:70:public void glGetBooleanv(int,java.nio.IntBuffer)
+    73:74:public void glGetBufferParameteriv(int,int,java.nio.IntBuffer)
+    77:78:public void glGetClipPlanef(int,java.nio.FloatBuffer)
+    81:82:public void glGetFloatv(int,java.nio.FloatBuffer)
+    85:86:public void glGetLightfv(int,int,java.nio.FloatBuffer)
+    89:90:public void glGetMaterialfv(int,int,java.nio.FloatBuffer)
+    93:94:public void glGetPointerv(int,java.nio.Buffer[])
+    97:98:public void glGetTexEnviv(int,int,java.nio.IntBuffer)
+    101:102:public void glGetTexParameterfv(int,int,java.nio.FloatBuffer)
+    105:106:public void glGetTexParameteriv(int,int,java.nio.IntBuffer)
+    109:109:public boolean glIsBuffer(int)
+    113:113:public boolean glIsEnabled(int)
+    117:117:public boolean glIsTexture(int)
+    121:122:public void glPointParameterf(int,float)
+    125:126:public void glPointParameterfv(int,java.nio.FloatBuffer)
+    129:130:public void glPointSizePointerOES(int,int,java.nio.Buffer)
+    133:134:public void glTexEnvi(int,int,int)
+    137:138:public void glTexEnviv(int,int,java.nio.IntBuffer)
+    141:142:public void glTexParameterfv(int,int,java.nio.FloatBuffer)
+    145:146:public void glTexParameteri(int,int,int)
+    149:150:public void glTexParameteriv(int,int,java.nio.IntBuffer)
+    153:154:public void glClipPlanef(int,float[],int)
+    157:158:public void glDeleteBuffers(int,int[],int)
+    161:162:public void glGenBuffers(int,int[],int)
+    165:166:public void glGetBooleanv(int,boolean[],int)
+    169:170:public void glGetBufferParameteriv(int,int,int[],int)
+    173:174:public void glGetClipPlanef(int,float[],int)
+    177:178:public void glGetFloatv(int,float[],int)
+    181:182:public void glGetLightfv(int,int,float[],int)
+    185:186:public void glGetMaterialfv(int,int,float[],int)
+    189:190:public void glGetTexEnviv(int,int,int[],int)
+    193:194:public void glGetTexParameterfv(int,int,float[],int)
+    197:198:public void glGetTexParameteriv(int,int,int[],int)
+    201:202:public void glPointParameterfv(int,float[],int)
+    205:206:public void glTexEnviv(int,int,int[],int)
+    209:210:public void glTexParameterfv(int,int,float[],int)
+    213:214:public void glTexParameteriv(int,int,int[],int)
+com.badlogic.gdx.backends.android.AndroidGL20:
+    public native void glActiveTexture(int)
+    public native void glBindAttribLocation(int,int,java.lang.String)
+    public native void glBlendColor(float,float,float,float)
+    public native void glBlendEquation(int)
+    public native void glBlendEquationSeparate(int,int)
+    public native void glBlendFuncSeparate(int,int,int,int)
+    public native void glClearDepthf(float)
+    public native void glClearStencil(int)
+    public native void glColorMask(boolean,boolean,boolean,boolean)
+    public native void glCompressedTexImage2D(int,int,int,int,int,int,int,java.nio.Buffer)
+    public native void glCompressedTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+    public native void glCopyTexImage2D(int,int,int,int,int,int,int,int)
+    public native void glCopyTexSubImage2D(int,int,int,int,int,int,int,int)
+    public native void glCullFace(int)
+    public native void glDeleteBuffers(int,java.nio.IntBuffer)
+    public native void glDeleteProgram(int)
+    public native void glDeleteShader(int)
+    public native void glDepthFunc(int)
+    public native void glDepthRangef(float,float)
+    public native void glDetachShader(int,int)
+    public native void glFinish()
+    public native void glFlush()
+    public native void glFrontFace(int)
+    public native void glGenerateMipmap(int)
+    public native java.lang.String glGetActiveAttrib(int,int,java.nio.IntBuffer,java.nio.Buffer)
+    public native java.lang.String glGetActiveUniform(int,int,java.nio.IntBuffer,java.nio.Buffer)
+    public native void glGetAttachedShaders(int,int,java.nio.Buffer,java.nio.IntBuffer)
+    public native void glGetBooleanv(int,java.nio.Buffer)
+    public native void glGetBufferParameteriv(int,int,java.nio.IntBuffer)
+    public native int glGetError()
+    public native void glGetFloatv(int,java.nio.FloatBuffer)
+    public native void glGetFramebufferAttachmentParameteriv(int,int,int,java.nio.IntBuffer)
+    public native void glGetIntegerv(int,java.nio.IntBuffer)
+    public native void glGetRenderbufferParameteriv(int,int,java.nio.IntBuffer)
+    public native void glGetShaderPrecisionFormat(int,int,java.nio.IntBuffer,java.nio.IntBuffer)
+    public native void glGetShaderSource(int,int,java.nio.Buffer,java.lang.String)
+    public native java.lang.String glGetString(int)
+    public native void glGetTexParameterfv(int,int,java.nio.FloatBuffer)
+    public native void glGetTexParameteriv(int,int,java.nio.IntBuffer)
+    public native void glGetUniformfv(int,int,java.nio.FloatBuffer)
+    public native void glGetUniformiv(int,int,java.nio.IntBuffer)
+    public native void glGetVertexAttribfv(int,int,java.nio.FloatBuffer)
+    public native void glGetVertexAttribiv(int,int,java.nio.IntBuffer)
+    public native void glGetVertexAttribPointerv(int,int,java.nio.Buffer)
+    public native void glHint(int,int)
+    public native boolean glIsBuffer(int)
+    public native boolean glIsEnabled(int)
+    public native boolean glIsFramebuffer(int)
+    public native boolean glIsProgram(int)
+    public native boolean glIsRenderbuffer(int)
+    public native boolean glIsShader(int)
+    public native boolean glIsTexture(int)
+    public native void glLineWidth(float)
+    public native void glPixelStorei(int,int)
+    public native void glPolygonOffset(float,float)
+    public native void glReadPixels(int,int,int,int,int,int,java.nio.Buffer)
+    public native void glReleaseShaderCompiler()
+    public native void glSampleCoverage(float,boolean)
+    public native void glScissor(int,int,int,int)
+    public native void glShaderBinary(int,java.nio.IntBuffer,int,java.nio.Buffer,int)
+    public native void glStencilFunc(int,int,int)
+    public native void glStencilFuncSeparate(int,int,int,int)
+    public native void glStencilMask(int)
+    public native void glStencilMaskSeparate(int,int)
+    public native void glStencilOp(int,int,int)
+    public native void glStencilOpSeparate(int,int,int,int)
+    public native void glTexParameterfv(int,int,java.nio.FloatBuffer)
+    public native void glTexParameteri(int,int,int)
+    public native void glTexParameteriv(int,int,java.nio.IntBuffer)
+    public native void glTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+    public native void glUniform1f(int,float)
+    public native void glUniform1fv(int,int,java.nio.FloatBuffer)
+    public native void glUniform1iv(int,int,java.nio.IntBuffer)
+    public native void glUniform2f(int,float,float)
+    public native void glUniform2fv(int,int,java.nio.FloatBuffer)
+    public native void glUniform2i(int,int,int)
+    public native void glUniform2iv(int,int,java.nio.IntBuffer)
+    public native void glUniform3f(int,float,float,float)
+    public native void glUniform3fv(int,int,java.nio.FloatBuffer)
+    public native void glUniform3i(int,int,int,int)
+    public native void glUniform3iv(int,int,java.nio.IntBuffer)
+    public native void glUniform4f(int,float,float,float,float)
+    public native void glUniform4fv(int,int,java.nio.FloatBuffer)
+    public native void glUniform4i(int,int,int,int,int)
+    public native void glUniform4iv(int,int,java.nio.IntBuffer)
+    public native void glUniformMatrix2fv(int,int,boolean,java.nio.FloatBuffer)
+    public native void glUniformMatrix3fv(int,int,boolean,java.nio.FloatBuffer)
+    public native void glValidateProgram(int)
+    public native void glVertexAttrib1f(int,float)
+    public native void glVertexAttrib1fv(int,java.nio.FloatBuffer)
+    public native void glVertexAttrib2f(int,float,float)
+    public native void glVertexAttrib2fv(int,java.nio.FloatBuffer)
+    public native void glVertexAttrib3f(int,float,float,float)
+    public native void glVertexAttrib3fv(int,java.nio.FloatBuffer)
+    public native void glVertexAttrib4f(int,float,float,float,float)
+    public native void glVertexAttrib4fv(int,java.nio.FloatBuffer)
+    public native void glVertexAttribPointer(int,int,int,boolean,int,java.nio.Buffer)
+com.badlogic.gdx.backends.android.AndroidGLU:
+    25:26:public void gluLookAt(com.badlogic.gdx.graphics.GL10,float,float,float,float,float,float,float,float,float)
+    29:30:public void gluOrtho2D(com.badlogic.gdx.graphics.GL10,float,float,float,float)
+    33:34:public void gluPerspective(com.badlogic.gdx.graphics.GL10,float,float,float,float)
+    38:39:public boolean gluProject(float,float,float,float[],int,float[],int,int[],int,float[],int)
+    44:45:public boolean gluUnProject(float,float,float,float[],int,float[],int,int[],int,float[],int)
+com.badlogic.gdx.backends.android.AndroidGraphics:
+    82:85:public AndroidGraphics(com.badlogic.gdx.backends.android.AndroidApplication,boolean,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+    88:105:private android.view.View createGLSurfaceView(android.app.Activity,boolean,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+    111:114:private android.opengl.GLSurfaceView$EGLConfigChooser getEglConfigChooser()
+    140:154:private boolean checkGL20()
+    202:202:public boolean isGL11Available()
+    214:214:private static boolean isPowerOfTwo(int)
+    442:442:public com.badlogic.gdx.Graphics$GraphicsType getType()
+    450:450:public int getFramesPerSecond()
+    466:466:public android.view.View getView()
+    474:474:public com.badlogic.gdx.graphics.GLCommon getGLCommon()
+    479:479:public float getPpiX()
+    484:484:public float getPpiY()
+    489:489:public float getPpcX()
+    494:494:public float getPpcY()
+    498:498:public com.badlogic.gdx.graphics.GLU getGLU()
+    502:502:public boolean supportsDisplayModeChange()
+    506:506:public boolean setDisplayMode(com.badlogic.gdx.Graphics$DisplayMode)
+    510:510:public com.badlogic.gdx.Graphics$DisplayMode[] getDisplayModes()
+    515:515:public void setTitle(java.lang.String)
+    519:519:public void setIcon(com.badlogic.gdx.graphics.Pixmap)
+com.badlogic.gdx.backends.android.AndroidGraphics$1
+com.badlogic.gdx.backends.android.AndroidInput:
+    int[] touchX
+    int[] touchY
+    boolean[] touched
+    int[] realId
+    final boolean hasMultitouch
+    private java.lang.String text
+    private com.badlogic.gdx.Input$TextInputListener textListener
+    private android.os.Handler handle
+    private final android.os.Vibrator vibrator
+    private float azimuth
+    private float pitch
+    private float roll
+    private float inclination
+    final float[] R
+    final float[] orientation
+    115:137:public AndroidInput(com.badlogic.gdx.backends.android.AndroidApplication,android.view.View,com.badlogic.gdx.backends.android.AndroidApplicationConfiguration)
+    148:148:public float getAccelerometerZ()
+    152:174:public void getTextInput(com.badlogic.gdx.Input$TextInputListener,java.lang.String,java.lang.String)
+    177:179:public int getX()
+    183:185:public int getY()
+    189:191:public int getX(int)
+    195:197:public int getY(int)
+    201:203:public boolean isTouched(int)
+    207:212:public boolean isKeyPressed(int)
+    216:218:public boolean isTouched()
+    222:225:public void setInputProcessor(com.badlogic.gdx.InputProcessor)
+    357:363:public void setOnscreenKeyboardVisible(boolean)
+    366:367:public void setCatchBackKey(boolean)
+    370:371:public void vibrate(int)
+    374:375:public void vibrate(long[],int)
+    378:379:public void cancelVibrate()
+    382:382:public boolean justTouched()
+    386:389:public boolean isButtonPressed(int)
+    395:401:private void updateOrientation()
+    404:408:public float getAzimuth()
+    412:416:public float getPitch()
+    420:424:public float getRoll()
+    462:462:public com.badlogic.gdx.InputProcessor getInputProcessor()
+    466:472:public boolean isPeripheralAvailable(com.badlogic.gdx.Input$Peripheral)
+    476:484:public int getFreePointerIndex()
+    488:493:public int lookUpPointerIndex(int)
+com.badlogic.gdx.backends.android.AndroidInput$1
+com.badlogic.gdx.backends.android.AndroidInput$2
+com.badlogic.gdx.backends.android.AndroidInput$3
+com.badlogic.gdx.backends.android.AndroidInput$3$1
+com.badlogic.gdx.backends.android.AndroidInput$3$2
+com.badlogic.gdx.backends.android.AndroidInput$KeyEvent:
+    static final int KEY_DOWN
+    static final int KEY_UP
+    static final int KEY_TYPED
+    long timeStamp
+    final com.badlogic.gdx.backends.android.AndroidInput this$0
+    50:50:AndroidInput$KeyEvent(com.badlogic.gdx.backends.android.AndroidInput)
+com.badlogic.gdx.backends.android.AndroidInput$TouchEvent:
+    static final int TOUCH_DOWN
+    static final int TOUCH_UP
+    static final int TOUCH_DRAGGED
+    long timeStamp
+    final com.badlogic.gdx.backends.android.AndroidInput this$0
+    61:61:AndroidInput$TouchEvent(com.badlogic.gdx.backends.android.AndroidInput)
+com.badlogic.gdx.backends.android.AndroidLocklessInput
+com.badlogic.gdx.backends.android.AndroidLocklessInput$1
+com.badlogic.gdx.backends.android.AndroidLocklessInput$1$1
+com.badlogic.gdx.backends.android.AndroidLocklessInput$KeyEvent
+com.badlogic.gdx.backends.android.AndroidLocklessInput$TouchEvent
+com.badlogic.gdx.backends.android.AndroidLocklessMultiTouchHandler
+com.badlogic.gdx.backends.android.AndroidLocklessSingleTouchHandler
+com.badlogic.gdx.backends.android.AndroidLocklessTouchHandler
+com.badlogic.gdx.backends.android.AndroidMultiTouchHandler
+com.badlogic.gdx.backends.android.AndroidMusic:
+    30:33:AndroidMusic(com.badlogic.gdx.backends.android.AndroidAudio,android.media.MediaPlayer)
+    49:49:public boolean isLooping()
+    77:78:public void setLooping(boolean)
+    81:82:public void setVolume(float)
+    85:90:public void stop()
+    93:93:public float getPosition()
+com.badlogic.gdx.backends.android.AndroidPreferences
+com.badlogic.gdx.backends.android.AndroidSingleTouchHandler
+com.badlogic.gdx.backends.android.AndroidSound
+com.badlogic.gdx.backends.android.livewallpaper.AndroidApplicationLW:
+    245:245:public com.badlogic.gdx.Application$ApplicationType getType()
+    253:253:public int getVersion()
+    258:258:public long getJavaHeap()
+    264:264:public long getNativeHeap()
+    280:280:public com.badlogic.gdx.Preferences getPreferences(java.lang.String)
+    284:287:public void postRunnable(java.lang.Runnable)
+    297:298:public void log(java.lang.String,java.lang.String,java.lang.Exception)
+com.badlogic.gdx.backends.android.livewallpaper.AndroidAudioDeviceLW
+com.badlogic.gdx.backends.android.livewallpaper.AndroidAudioLW:
+    85:110:public com.badlogic.gdx.audio.Music newMusic(com.badlogic.gdx.files.FileHandle)
+    120:135:public com.badlogic.gdx.audio.Sound newSound(com.badlogic.gdx.files.FileHandle)
+    144:144:public com.badlogic.gdx.audio.AudioRecorder newAudioRecoder(int,boolean)
+    157:157:public com.badlogic.gdx.audio.AudioDevice newAudioDevice(int,boolean)
+com.badlogic.gdx.backends.android.livewallpaper.AndroidFileHandleLW
+com.badlogic.gdx.backends.android.livewallpaper.AndroidGL10:
+    35:36:public final void glActiveTexture(int)
+    39:40:public final void glAlphaFunc(int,float)
+    59:60:public final void glClearDepthf(float)
+    63:64:public final void glClearStencil(int)
+    75:76:public final void glColorMask(boolean,boolean,boolean,boolean)
+    84:85:public final void glCompressedTexImage2D(int,int,int,int,int,int,int,java.nio.Buffer)
+    89:90:public final void glCompressedTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+    94:95:public final void glCopyTexImage2D(int,int,int,int,int,int,int,int)
+    99:100:public final void glCopyTexSubImage2D(int,int,int,int,int,int,int,int)
+    103:104:public final void glCullFace(int)
+    111:112:public final void glDepthFunc(int)
+    119:120:public final void glDepthRangef(float,float)
+    147:148:public final void glFinish()
+    151:152:public final void glFlush()
+    155:156:public final void glFogf(int,float)
+    159:160:public final void glFogfv(int,java.nio.FloatBuffer)
+    163:164:public final void glFrontFace(int)
+    167:168:public final void glFrustumf(float,float,float,float,float,float)
+    175:175:public final int glGetError()
+    179:180:public final void glGetIntegerv(int,java.nio.IntBuffer)
+    183:183:public final java.lang.String glGetString(int)
+    187:188:public final void glHint(int,int)
+    191:192:public final void glLightModelf(int,float)
+    195:196:public final void glLightModelfv(int,java.nio.FloatBuffer)
+    199:200:public final void glLightf(int,int,float)
+    203:204:public final void glLightfv(int,int,java.nio.FloatBuffer)
+    207:208:public final void glLineWidth(float)
+    211:212:public final void glLoadIdentity()
+    215:216:public final void glLoadMatrixf(java.nio.FloatBuffer)
+    219:220:public final void glLogicOp(int)
+    223:224:public final void glMaterialf(int,int,float)
+    227:228:public final void glMaterialfv(int,int,java.nio.FloatBuffer)
+    235:236:public final void glMultMatrixf(java.nio.FloatBuffer)
+    239:240:public final void glMultiTexCoord4f(int,float,float,float,float)
+    243:244:public final void glNormal3f(float,float,float)
+    251:252:public final void glOrthof(float,float,float,float,float,float)
+    255:256:public final void glPixelStorei(int,int)
+    259:260:public final void glPointSize(float)
+    263:264:public final void glPolygonOffset(float,float)
+    275:276:public final void glReadPixels(int,int,int,int,int,int,java.nio.Buffer)
+    279:280:public final void glRotatef(float,float,float,float)
+    283:284:public final void glSampleCoverage(float,boolean)
+    287:288:public final void glScalef(float,float,float)
+    291:292:public final void glScissor(int,int,int,int)
+    295:296:public final void glShadeModel(int)
+    299:300:public final void glStencilFunc(int,int,int)
+    303:304:public final void glStencilMask(int)
+    307:308:public final void glStencilOp(int,int,int)
+    315:316:public final void glTexEnvf(int,int,float)
+    319:320:public final void glTexEnvfv(int,int,java.nio.FloatBuffer)
+    333:334:public final void glTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+    349:350:public final void glDeleteTextures(int,int[],int)
+    353:354:public final void glFogfv(int,float[],int)
+    357:358:public final void glGenTextures(int,int[],int)
+    361:362:public final void glGetIntegerv(int,int[],int)
+    365:366:public final void glLightModelfv(int,float[],int)
+    369:370:public final void glLightfv(int,int,float[],int)
+    377:378:public final void glMaterialfv(int,int,float[],int)
+    385:386:public final void glTexEnvfv(int,int,float[],int)
+    390:390:public void glPolygonMode(int,int)
+com.badlogic.gdx.backends.android.livewallpaper.AndroidGL11:
+    51:52:public void glClipPlanef(int,java.nio.FloatBuffer)
+    55:56:public void glColor4ub(byte,byte,byte,byte)
+    59:60:public void glDeleteBuffers(int,java.nio.IntBuffer)
+    67:68:public void glGetBooleanv(int,java.nio.IntBuffer)
+    71:72:public void glGetBufferParameteriv(int,int,java.nio.IntBuffer)
+    75:76:public void glGetClipPlanef(int,java.nio.FloatBuffer)
+    79:80:public void glGetFloatv(int,java.nio.FloatBuffer)
+    83:84:public void glGetLightfv(int,int,java.nio.FloatBuffer)
+    87:88:public void glGetMaterialfv(int,int,java.nio.FloatBuffer)
+    91:92:public void glGetPointerv(int,java.nio.Buffer[])
+    95:96:public void glGetTexEnviv(int,int,java.nio.IntBuffer)
+    99:100:public void glGetTexParameterfv(int,int,java.nio.FloatBuffer)
+    103:104:public void glGetTexParameteriv(int,int,java.nio.IntBuffer)
+    107:107:public boolean glIsBuffer(int)
+    111:111:public boolean glIsEnabled(int)
+    115:115:public boolean glIsTexture(int)
+    119:120:public void glPointParameterf(int,float)
+    123:124:public void glPointParameterfv(int,java.nio.FloatBuffer)
+    127:128:public void glPointSizePointerOES(int,int,java.nio.Buffer)
+    131:132:public void glTexEnvi(int,int,int)
+    135:136:public void glTexEnviv(int,int,java.nio.IntBuffer)
+    139:140:public void glTexParameterfv(int,int,java.nio.FloatBuffer)
+    143:144:public void glTexParameteri(int,int,int)
+    147:148:public void glTexParameteriv(int,int,java.nio.IntBuffer)
+    151:152:public void glClipPlanef(int,float[],int)
+    155:156:public void glDeleteBuffers(int,int[],int)
+    159:160:public void glGenBuffers(int,int[],int)
+    163:164:public void glGetBooleanv(int,boolean[],int)
+    167:168:public void glGetBufferParameteriv(int,int,int[],int)
+    171:172:public void glGetClipPlanef(int,float[],int)
+    175:176:public void glGetFloatv(int,float[],int)
+    179:180:public void glGetLightfv(int,int,float[],int)
+    183:184:public void glGetMaterialfv(int,int,float[],int)
+    187:188:public void glGetTexEnviv(int,int,int[],int)
+    191:192:public void glGetTexParameterfv(int,int,float[],int)
+    195:196:public void glGetTexParameteriv(int,int,int[],int)
+    199:200:public void glPointParameterfv(int,float[],int)
+    203:204:public void glTexEnviv(int,int,int[],int)
+    207:208:public void glTexParameterfv(int,int,float[],int)
+    211:212:public void glTexParameteriv(int,int,int[],int)
+com.badlogic.gdx.backends.android.livewallpaper.AndroidGraphicsLW:
+    215:215:public boolean isGL11Available()
+    374:386:public void destroy()
+    476:476:public com.badlogic.gdx.Graphics$GraphicsType getType()
+    484:484:public int getFramesPerSecond()
+    488:497:public void clearManagedCaches()
+    504:504:public com.badlogic.gdx.graphics.GLCommon getGLCommon()
+    509:509:public float getPpiX()
+    514:514:public float getPpiY()
+    519:519:public float getPpcX()
+    524:524:public float getPpcY()
+    533:533:public com.badlogic.gdx.Graphics$DisplayMode[] getDisplayModes()
+    538:538:public com.badlogic.gdx.graphics.GLU getGLU()
+    543:543:public boolean setDisplayMode(com.badlogic.gdx.Graphics$DisplayMode)
+    549:549:public void setIcon(com.badlogic.gdx.graphics.Pixmap)
+    554:554:public void setTitle(java.lang.String)
+    558:558:public boolean supportsDisplayModeChange()
+com.badlogic.gdx.backends.android.livewallpaper.AndroidInputLW:
+    boolean keyboardAvailable
+    115:115:public float getAccelerometerZ()
+    120:120:public int getX()
+    127:127:public int getY()
+    134:134:public int getX(int)
+    141:141:public int getY(int)
+    147:147:public boolean isTouched(int)
+    154:154:public boolean isTouched()
+    161:164:public void setInputProcessor(com.badlogic.gdx.InputProcessor)
+    255:256:public void setCatchBackKey(boolean)
+    260:261:public void vibrate(int)
+    265:266:public void vibrate(long[],int)
+    270:271:public void cancelVibrate()
+    275:275:public boolean justTouched()
+    280:283:public boolean isButtonPressed(int)
+    290:297:private void updateOrientation()
+    301:305:public float getAzimuth()
+    310:314:public float getPitch()
+    319:323:public float getRoll()
+    371:371:public com.badlogic.gdx.InputProcessor getInputProcessor()
+    376:387:public boolean isPeripheralAvailable(com.badlogic.gdx.Input$Peripheral)
+    391:400:public int getFreePointerIndex()
+    404:410:public int lookUpPointerIndex(int)
+    417:417:public void getTextInput(com.badlogic.gdx.Input$TextInputListener,java.lang.String,java.lang.String)
+    421:421:public boolean isKeyPressed(int)
+    426:426:public void setOnscreenKeyboardVisible(boolean)
+com.badlogic.gdx.backends.android.livewallpaper.AndroidInputLW$TouchEvent:
+    static final int TOUCH_DOWN
+    static final int TOUCH_UP
+    static final int TOUCH_DRAGGED
+    static final int TOUCH_TAP
+    static final int TOUCH_DROP
+com.badlogic.gdx.backends.android.livewallpaper.AndroidMusicLW:
+    private final com.badlogic.gdx.backends.android.livewallpaper.AndroidAudioLW audio
+    29:32:AndroidMusicLW(com.badlogic.gdx.backends.android.livewallpaper.AndroidAudioLW,android.media.MediaPlayer)
+    35:38:public void dispose()
+    41:41:public boolean isLooping()
+    66:67:public void setLooping(boolean)
+    70:71:public void setVolume(float)
+    74:76:public void stop()
+    81:81:public float getPosition()
+com.badlogic.gdx.backends.android.livewallpaper.AndroidPreferencesLW
+com.badlogic.gdx.backends.android.livewallpaper.AndroidSoundLW
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.DefaultGLSurfaceView:
+    20:22:public DefaultGLSurfaceView(android.service.wallpaper.WallpaperService$Engine,android.util.AttributeSet,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.EGLLogWrapper
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.FillResolutionStrategy
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.FixedResolutionStrategy
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLBaseSurfaceView:
+    private static final boolean LOG_VIEW
+    private static final boolean LOG_THREADS
+    private static final boolean LOG_SURFACE
+    private static final boolean LOG_RENDERER
+    private static final boolean DRAW_TWICE_AFTER_SIZE_CHANGED
+    public static final int RENDERMODE_WHEN_DIRTY
+    public static final int RENDERMODE_CONTINUOUSLY
+    public static final int DEBUG_CHECK_GL_ERROR
+    public static final int DEBUG_LOG_GL_CALLS
+    192:195:public GLBaseSurfaceView(android.service.wallpaper.WallpaperService$Engine,android.util.AttributeSet)
+    223:224:public void setGLWrapper(com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLBaseSurfaceView$GLWrapper)
+    234:235:public void setDebugFlags(int)
+    242:242:public int getDebugFlags()
+    306:308:public void setEGLWindowSurfaceFactory(com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLSurfaceView20$ContextFactory)
+    336:337:public void setEGLConfigChooser(boolean)
+    350:351:public void setEGLConfigChooser(int,int,int,int,int,int)
+    368:369:public void setRenderMode(int)
+    378:378:public int getRenderMode()
+    387:388:public void requestRender()
+    463:464:public void queueEvent(java.lang.Runnable)
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLBaseSurfaceView$GLThread:
+    1011:1018:public void setRenderMode(int)
+    1021:1021:public int getRenderMode()
+    1027:1031:public void requestRender()
+    1133:1140:public void queueEvent(java.lang.Runnable)
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLDebugHelper
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLErrorWrapper
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLException
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLLogWrapper
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLLogWrapper$PointerInfo
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLSurfaceView20:
+    private static final boolean DEBUG
+    67:71:public GLSurfaceView20(android.service.wallpaper.WallpaperService$Engine,boolean,int,int,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLSurfaceView20$ConfigChooser:
+    204:210:private void printConfigs(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig[])
+    213:244:private void printConfig(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig)
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.GLWrapperBase
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.RatioResolutionStrategy
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.ResolutionStrategy
+com.badlogic.gdx.backends.android.livewallpaper.surfaceview.ResolutionStrategy$MeasuredDimension
+com.badlogic.gdx.backends.android.surfaceview.DefaultGLSurfaceView
+com.badlogic.gdx.backends.android.surfaceview.EGLLogWrapper
+com.badlogic.gdx.backends.android.surfaceview.FixedResolutionStrategy
+com.badlogic.gdx.backends.android.surfaceview.GLBaseSurfaceView:
+    private static final boolean LOG_THREADS
+    private static final boolean LOG_SURFACE
+    private static final boolean LOG_RENDERER
+    private static final boolean DRAW_TWICE_AFTER_SIZE_CHANGED
+    public static final int RENDERMODE_WHEN_DIRTY
+    public static final int RENDERMODE_CONTINUOUSLY
+    public static final int DEBUG_CHECK_GL_ERROR
+    public static final int DEBUG_LOG_GL_CALLS
+    204:205:public void setGLWrapper(com.badlogic.gdx.backends.android.surfaceview.GLBaseSurfaceView$GLWrapper)
+    275:277:public void setEGLContextFactory(com.badlogic.gdx.backends.android.surfaceview.GLBaseSurfaceView$EGLContextFactory)
+    287:289:public void setEGLWindowSurfaceFactory(com.badlogic.gdx.backends.android.surfaceview.GLBaseSurfaceView$EGLWindowSurfaceFactory)
+com.badlogic.gdx.backends.android.surfaceview.GLDebugHelper:
+    public static final int CONFIG_CHECK_GL_ERROR
+    public static final int CONFIG_CHECK_THREAD
+    public static final int CONFIG_LOG_ARGUMENT_NAMES
+    public static final int ERROR_WRONG_THREAD
+    87:90:public static javax.microedition.khronos.egl.EGL wrap(javax.microedition.khronos.egl.EGL,int,java.io.Writer)
+com.badlogic.gdx.backends.android.surfaceview.GLException:
+    42:42:int getError()
+com.badlogic.gdx.backends.android.surfaceview.GLLogWrapper:
+    private static final int FORMAT_INT
+    private static final int FORMAT_FLOAT
+    private static final int FORMAT_FIXED
+    251:267:public static java.lang.String getErrorString(int)
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20:
+    private static final boolean DEBUG
+    59:62:public GLSurfaceView20(android.content.Context,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+    65:69:public GLSurfaceView20(android.content.Context,boolean,int,int,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+    84:101:private void init(boolean,int,int)
+    123:126:static void checkEglError(java.lang.String,javax.microedition.khronos.egl.EGL10)
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20$ConfigChooser
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20$ContextFactory
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceViewCupcake:
+    public static final int RENDERMODE_WHEN_DIRTY
+    public static final int RENDERMODE_CONTINUOUSLY
+    public static final int DEBUG_CHECK_GL_ERROR
+    public static final int DEBUG_LOG_GL_CALLS
+    private int mDebugFlags
+    174:177:public GLSurfaceViewCupcake(android.content.Context,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+    183:186:public GLSurfaceViewCupcake(android.content.Context,android.util.AttributeSet,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy)
+    198:202:private void init()
+    215:216:public void setGLWrapper(com.badlogic.gdx.backends.android.surfaceview.GLSurfaceViewCupcake$GLWrapper)
+    226:227:public void setDebugFlags(int)
+    234:234:public int getDebugFlags()
+    263:268:public void setRenderer(android.opengl.GLSurfaceView$Renderer)
+    280:284:public void setEGLConfigChooser(android.opengl.GLSurfaceView$EGLConfigChooser)
+    298:299:public void setEGLConfigChooser(boolean)
+    312:313:public void setEGLConfigChooser(int,int,int,int,int,int)
+    330:334:public void setRenderMode(int)
+    343:343:public int getRenderMode()
+    352:353:public void requestRender()
+    427:430:public void queueEvent(java.lang.Runnable)
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceViewCupcake$GLThread:
+    817:819:public int getRenderMode()
+    823:827:public void requestRender()
+    884:887:public void queueEvent(java.lang.Runnable)
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceViewCupcake$LogWriter
+com.badlogic.gdx.backends.android.surfaceview.GLWrapperBase:
+    333:333:public void glBindFramebufferOES(int,int)
+    337:337:public void glBindRenderbufferOES(int,int)
+    341:341:public void glBlendEquation(int)
+    345:345:public void glBlendEquationSeparate(int,int)
+    349:349:public void glBlendFuncSeparate(int,int,int,int)
+    353:353:int glCheckFramebufferStatusOES(int)
+    357:357:public void glCompressedTexImage2D(int,int,int,int,int,int,int)
+    361:361:public void glDeleteFramebuffersOES(int,int[],int)
+    365:365:public void glDeleteFramebuffersOES(int,java.nio.IntBuffer)
+    369:369:public void glDeleteRenderbuffersOES(int,int[],int)
+    373:373:public void glDeleteRenderbuffersOES(int,java.nio.IntBuffer)
+    377:377:public void glFramebufferRenderbufferOES(int,int,int,int)
+    381:381:public void glFramebufferTexture2DOES(int,int,int,int,int)
+    385:385:public void glGenerateMipmapOES(int)
+    389:389:public void glGenFramebuffersOES(int,int[],int)
+    393:393:public void glGenFramebuffersOES(int,java.nio.IntBuffer)
+    397:397:public void glGenRenderbuffersOES(int,int[],int)
+    401:401:public void glGenRenderbuffersOES(int,java.nio.IntBuffer)
+    405:405:public void glGetFramebufferAttachmentParameterivOES(int,int,int,int[],int)
+    409:409:public void glGetFramebufferAttachmentParameterivOES(int,int,int,java.nio.IntBuffer)
+    413:413:public void glGetRenderbufferParameterivOES(int,int,int[],int)
+    417:417:public void glGetRenderbufferParameterivOES(int,int,java.nio.IntBuffer)
+    421:421:public void glGetTexGenfv(int,int,float[],int)
+    425:425:public void glGetTexGenfv(int,int,java.nio.FloatBuffer)
+    429:429:public void glGetTexGeniv(int,int,int[],int)
+    433:433:public void glGetTexGeniv(int,int,java.nio.IntBuffer)
+    437:437:public void glGetTexGenxv(int,int,int[],int)
+    441:441:public void glGetTexGenxv(int,int,java.nio.IntBuffer)
+    445:445:public boolean glIsFramebufferOES(int)
+    449:449:public boolean glIsRenderbufferOES(int)
+    453:453:public void glRenderbufferStorageOES(int,int,int,int)
+    457:457:public void glTexGenf(int,int,float)
+    461:461:public void glTexGenfv(int,int,float[],int)
+    465:465:public void glTexGenfv(int,int,java.nio.FloatBuffer)
+    469:469:public void glTexGeni(int,int,int)
+    473:473:public void glTexGeniv(int,int,int[],int)
+    477:477:public void glTexGeniv(int,int,java.nio.IntBuffer)
+    481:481:public void glTexGenx(int,int,int)
+    485:485:public void glTexGenxv(int,int,int[],int)
+    489:489:public void glTexGenxv(int,int,java.nio.IntBuffer)
+com.badlogic.gdx.backends.android.surfaceview.RatioResolutionStrategy
+com.badlogic.gdx.files.FileHandle:
+    56:56:public java.lang.String path()
+    60:60:public java.lang.String name()
+    64:67:public java.lang.String extension()
+    71:74:public java.lang.String nameWithoutExtension()
+    78:78:public com.badlogic.gdx.Files$FileType type()
+    110:110:public java.lang.String readString()
+    118:139:public java.lang.String readString(java.lang.String)
+    149:156:public java.io.OutputStream write(boolean)
+    166:172:public com.badlogic.gdx.files.FileHandle[] list()
+    180:181:public boolean isDirectory()
+    198:201:public void mkdirs()
+    207:214:public boolean exists()
+    222:224:public boolean delete()
+    232:234:public boolean deleteDirectory()
+    242:266:public void copyTo(com.badlogic.gdx.files.FileHandle)
+    274:278:public void moveTo(com.badlogic.gdx.files.FileHandle)
+    284:297:public long length()
+    305:316:private static boolean deleteDirectory(java.io.File)
+com.badlogic.gdx.files.FileHandle$1
+com.badlogic.gdx.files.FileHandleStream
+com.badlogic.gdx.graphics.Camera
+com.badlogic.gdx.graphics.Color:
+    63:65:public Color(com.badlogic.gdx.graphics.Color)
+    73:78:public com.badlogic.gdx.graphics.Color set(com.badlogic.gdx.graphics.Color)
+    88:93:public com.badlogic.gdx.graphics.Color mul(com.badlogic.gdx.graphics.Color)
+    103:108:public com.badlogic.gdx.graphics.Color mul(float)
+    118:123:public com.badlogic.gdx.graphics.Color add(com.badlogic.gdx.graphics.Color)
+    133:138:public com.badlogic.gdx.graphics.Color sub(com.badlogic.gdx.graphics.Color)
+    160:164:public void set(float,float,float,float)
+    203:205:public static float toFloatBits(int,int,int,int)
+    219:219:public static int toIntBits(int,int,int,int)
+    248:249:public static float toFloatBits(float,float,float,float)
+    253:253:public static int alpha(float)
+    257:257:public static int luminanceAlpha(float,float)
+    261:261:public static int rgb565(float,float,float)
+    265:265:public static int rgba4444(float,float,float,float)
+    269:269:public static int rgb888(float,float,float)
+com.badlogic.gdx.graphics.FPSLogger
+com.badlogic.gdx.graphics.GL10:
+    public static final int GL_OES_VERSION_1_0
+    public static final int GL_OES_read_format
+    public static final int GL_OES_compressed_paletted_texture
+    public static final int GL_DEPTH_BUFFER_BIT
+    public static final int GL_STENCIL_BUFFER_BIT
+    public static final int GL_COLOR_BUFFER_BIT
+    public static final int GL_FALSE
+    public static final int GL_TRUE
+    public static final int GL_POINTS
+    public static final int GL_LINES
+    public static final int GL_LINE_LOOP
+    public static final int GL_LINE_STRIP
+    public static final int GL_TRIANGLES
+    public static final int GL_TRIANGLE_STRIP
+    public static final int GL_TRIANGLE_FAN
+    public static final int GL_NEVER
+    public static final int GL_LESS
+    public static final int GL_EQUAL
+    public static final int GL_LEQUAL
+    public static final int GL_GREATER
+    public static final int GL_NOTEQUAL
+    public static final int GL_GEQUAL
+    public static final int GL_ALWAYS
+    public static final int GL_ZERO
+    public static final int GL_ONE
+    public static final int GL_SRC_COLOR
+    public static final int GL_ONE_MINUS_SRC_COLOR
+    public static final int GL_SRC_ALPHA
+    public static final int GL_ONE_MINUS_SRC_ALPHA
+    public static final int GL_DST_ALPHA
+    public static final int GL_ONE_MINUS_DST_ALPHA
+    public static final int GL_DST_COLOR
+    public static final int GL_ONE_MINUS_DST_COLOR
+    public static final int GL_SRC_ALPHA_SATURATE
+    public static final int GL_FRONT
+    public static final int GL_BACK
+    public static final int GL_FRONT_AND_BACK
+    public static final int GL_FOG
+    public static final int GL_LIGHTING
+    public static final int GL_TEXTURE_2D
+    public static final int GL_CULL_FACE
+    public static final int GL_ALPHA_TEST
+    public static final int GL_BLEND
+    public static final int GL_COLOR_LOGIC_OP
+    public static final int GL_DITHER
+    public static final int GL_STENCIL_TEST
+    public static final int GL_DEPTH_TEST
+    public static final int GL_POINT_SMOOTH
+    public static final int GL_LINE_SMOOTH
+    public static final int GL_SCISSOR_TEST
+    public static final int GL_COLOR_MATERIAL
+    public static final int GL_NORMALIZE
+    public static final int GL_RESCALE_NORMAL
+    public static final int GL_POLYGON_OFFSET_FILL
+    public static final int GL_VERTEX_ARRAY
+    public static final int GL_NORMAL_ARRAY
+    public static final int GL_COLOR_ARRAY
+    public static final int GL_TEXTURE_COORD_ARRAY
+    public static final int GL_MULTISAMPLE
+    public static final int GL_SAMPLE_ALPHA_TO_COVERAGE
+    public static final int GL_SAMPLE_ALPHA_TO_ONE
+    public static final int GL_SAMPLE_COVERAGE
+    public static final int GL_NO_ERROR
+    public static final int GL_INVALID_ENUM
+    public static final int GL_INVALID_VALUE
+    public static final int GL_INVALID_OPERATION
+    public static final int GL_STACK_OVERFLOW
+    public static final int GL_STACK_UNDERFLOW
+    public static final int GL_OUT_OF_MEMORY
+    public static final int GL_EXP
+    public static final int GL_EXP2
+    public static final int GL_FOG_DENSITY
+    public static final int GL_FOG_START
+    public static final int GL_FOG_END
+    public static final int GL_FOG_MODE
+    public static final int GL_FOG_COLOR
+    public static final int GL_CW
+    public static final int GL_CCW
+    public static final int GL_SMOOTH_POINT_SIZE_RANGE
+    public static final int GL_SMOOTH_LINE_WIDTH_RANGE
+    public static final int GL_ALIASED_POINT_SIZE_RANGE
+    public static final int GL_ALIASED_LINE_WIDTH_RANGE
+    public static final int GL_IMPLEMENTATION_COLOR_READ_TYPE_OES
+    public static final int GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES
+    public static final int GL_MAX_LIGHTS
+    public static final int GL_MAX_TEXTURE_SIZE
+    public static final int GL_MAX_MODELVIEW_STACK_DEPTH
+    public static final int GL_MAX_PROJECTION_STACK_DEPTH
+    public static final int GL_MAX_TEXTURE_STACK_DEPTH
+    public static final int GL_MAX_VIEWPORT_DIMS
+    public static final int GL_MAX_ELEMENTS_VERTICES
+    public static final int GL_MAX_ELEMENTS_INDICES
+    public static final int GL_MAX_TEXTURE_UNITS
+    public static final int GL_NUM_COMPRESSED_TEXTURE_FORMATS
+    public static final int GL_COMPRESSED_TEXTURE_FORMATS
+    public static final int GL_SUBPIXEL_BITS
+    public static final int GL_RED_BITS
+    public static final int GL_GREEN_BITS
+    public static final int GL_BLUE_BITS
+    public static final int GL_ALPHA_BITS
+    public static final int GL_DEPTH_BITS
+    public static final int GL_STENCIL_BITS
+    public static final int GL_DONT_CARE
+    public static final int GL_FASTEST
+    public static final int GL_NICEST
+    public static final int GL_PERSPECTIVE_CORRECTION_HINT
+    public static final int GL_POINT_SMOOTH_HINT
+    public static final int GL_LINE_SMOOTH_HINT
+    public static final int GL_POLYGON_SMOOTH_HINT
+    public static final int GL_FOG_HINT
+    public static final int GL_LIGHT_MODEL_AMBIENT
+    public static final int GL_LIGHT_MODEL_TWO_SIDE
+    public static final int GL_AMBIENT
+    public static final int GL_DIFFUSE
+    public static final int GL_SPECULAR
+    public static final int GL_POSITION
+    public static final int GL_SPOT_DIRECTION
+    public static final int GL_SPOT_EXPONENT
+    public static final int GL_SPOT_CUTOFF
+    public static final int GL_CONSTANT_ATTENUATION
+    public static final int GL_LINEAR_ATTENUATION
+    public static final int GL_QUADRATIC_ATTENUATION
+    public static final int GL_BYTE
+    public static final int GL_UNSIGNED_BYTE
+    public static final int GL_SHORT
+    public static final int GL_UNSIGNED_SHORT
+    public static final int GL_FLOAT
+    public static final int GL_CLEAR
+    public static final int GL_AND
+    public static final int GL_AND_REVERSE
+    public static final int GL_COPY
+    public static final int GL_AND_INVERTED
+    public static final int GL_NOOP
+    public static final int GL_XOR
+    public static final int GL_OR
+    public static final int GL_NOR
+    public static final int GL_EQUIV
+    public static final int GL_INVERT
+    public static final int GL_OR_REVERSE
+    public static final int GL_COPY_INVERTED
+    public static final int GL_OR_INVERTED
+    public static final int GL_NAND
+    public static final int GL_SET
+    public static final int GL_EMISSION
+    public static final int GL_SHININESS
+    public static final int GL_AMBIENT_AND_DIFFUSE
+    public static final int GL_MODELVIEW
+    public static final int GL_PROJECTION
+    public static final int GL_TEXTURE
+    public static final int GL_ALPHA
+    public static final int GL_RGB
+    public static final int GL_RGBA
+    public static final int GL_LUMINANCE
+    public static final int GL_LUMINANCE_ALPHA
+    public static final int GL_UNPACK_ALIGNMENT
+    public static final int GL_PACK_ALIGNMENT
+    public static final int GL_UNSIGNED_SHORT_4_4_4_4
+    public static final int GL_UNSIGNED_SHORT_5_5_5_1
+    public static final int GL_UNSIGNED_SHORT_5_6_5
+    public static final int GL_FLAT
+    public static final int GL_SMOOTH
+    public static final int GL_KEEP
+    public static final int GL_REPLACE
+    public static final int GL_INCR
+    public static final int GL_DECR
+    public static final int GL_VENDOR
+    public static final int GL_RENDERER
+    public static final int GL_VERSION
+    public static final int GL_EXTENSIONS
+    public static final int GL_MODULATE
+    public static final int GL_DECAL
+    public static final int GL_ADD
+    public static final int GL_TEXTURE_ENV_MODE
+    public static final int GL_TEXTURE_ENV_COLOR
+    public static final int GL_TEXTURE_ENV
+    public static final int GL_NEAREST
+    public static final int GL_LINEAR
+    public static final int GL_NEAREST_MIPMAP_NEAREST
+    public static final int GL_LINEAR_MIPMAP_NEAREST
+    public static final int GL_NEAREST_MIPMAP_LINEAR
+    public static final int GL_LINEAR_MIPMAP_LINEAR
+    public static final int GL_TEXTURE_MAG_FILTER
+    public static final int GL_TEXTURE_MIN_FILTER
+    public static final int GL_TEXTURE_WRAP_S
+    public static final int GL_TEXTURE_WRAP_T
+    public static final int GL_TEXTURE0
+    public static final int GL_TEXTURE1
+    public static final int GL_TEXTURE2
+    public static final int GL_TEXTURE3
+    public static final int GL_TEXTURE4
+    public static final int GL_TEXTURE5
+    public static final int GL_TEXTURE6
+    public static final int GL_TEXTURE7
+    public static final int GL_TEXTURE8
+    public static final int GL_TEXTURE9
+    public static final int GL_TEXTURE10
+    public static final int GL_TEXTURE11
+    public static final int GL_TEXTURE12
+    public static final int GL_TEXTURE13
+    public static final int GL_TEXTURE14
+    public static final int GL_TEXTURE15
+    public static final int GL_TEXTURE16
+    public static final int GL_TEXTURE17
+    public static final int GL_TEXTURE18
+    public static final int GL_TEXTURE19
+    public static final int GL_TEXTURE20
+    public static final int GL_TEXTURE21
+    public static final int GL_TEXTURE22
+    public static final int GL_TEXTURE23
+    public static final int GL_TEXTURE24
+    public static final int GL_TEXTURE25
+    public static final int GL_TEXTURE26
+    public static final int GL_TEXTURE27
+    public static final int GL_TEXTURE28
+    public static final int GL_TEXTURE29
+    public static final int GL_TEXTURE30
+    public static final int GL_TEXTURE31
+    public static final int GL_REPEAT
+    public static final int GL_CLAMP_TO_EDGE
+    public static final int GL_PALETTE4_RGB8_OES
+    public static final int GL_PALETTE4_RGBA8_OES
+    public static final int GL_PALETTE4_R5_G6_B5_OES
+    public static final int GL_PALETTE4_RGBA4_OES
+    public static final int GL_PALETTE4_RGB5_A1_OES
+    public static final int GL_PALETTE8_RGB8_OES
+    public static final int GL_PALETTE8_RGBA8_OES
+    public static final int GL_PALETTE8_R5_G6_B5_OES
+    public static final int GL_PALETTE8_RGBA4_OES
+    public static final int GL_PALETTE8_RGB5_A1_OES
+    public static final int GL_LIGHT0
+    public static final int GL_LIGHT1
+    public static final int GL_LIGHT2
+    public static final int GL_LIGHT3
+    public static final int GL_LIGHT4
+    public static final int GL_LIGHT5
+    public static final int GL_LIGHT6
+    public static final int GL_LIGHT7
+    public static final int GL_POINT
+    public static final int GL_LINE
+    public static final int GL_FILL
+    public abstract void glAlphaFunc(int,float)
+    public abstract void glDeleteTextures(int,int[],int)
+    public abstract void glFogf(int,float)
+    public abstract void glFogfv(int,float[],int)
+    public abstract void glFogfv(int,java.nio.FloatBuffer)
+    public abstract void glFrustumf(float,float,float,float,float,float)
+    public abstract void glGenTextures(int,int[],int)
+    public abstract void glGetIntegerv(int,int[],int)
+    public abstract void glLightModelf(int,float)
+    public abstract void glLightModelfv(int,float[],int)
+    public abstract void glLightModelfv(int,java.nio.FloatBuffer)
+    public abstract void glLightf(int,int,float)
+    public abstract void glLightfv(int,int,float[],int)
+    public abstract void glLightfv(int,int,java.nio.FloatBuffer)
+    public abstract void glLoadIdentity()
+    public abstract void glLoadMatrixf(java.nio.FloatBuffer)
+    public abstract void glLogicOp(int)
+    public abstract void glMaterialf(int,int,float)
+    public abstract void glMaterialfv(int,int,float[],int)
+    public abstract void glMaterialfv(int,int,java.nio.FloatBuffer)
+    public abstract void glMultMatrixf(java.nio.FloatBuffer)
+    public abstract void glMultiTexCoord4f(int,float,float,float,float)
+    public abstract void glNormal3f(float,float,float)
+    public abstract void glOrthof(float,float,float,float,float,float)
+    public abstract void glPointSize(float)
+    public abstract void glRotatef(float,float,float,float)
+    public abstract void glSampleCoverage(float,boolean)
+    public abstract void glScalef(float,float,float)
+    public abstract void glShadeModel(int)
+    public abstract void glTexEnvf(int,int,float)
+    public abstract void glTexEnvfv(int,int,float[],int)
+    public abstract void glTexEnvfv(int,int,java.nio.FloatBuffer)
+    public abstract void glPolygonMode(int,int)
+com.badlogic.gdx.graphics.GL11:
+    public static final int GL_OES_VERSION_1_0
+    public static final int GL_MAX_ELEMENTS_VERTICES
+    public static final int GL_MAX_ELEMENTS_INDICES
+    public static final int GL_POLYGON_SMOOTH_HINT
+    public static final int GL_VERSION_ES_CM_1_0
+    public static final int GL_VERSION_ES_CL_1_0
+    public static final int GL_VERSION_ES_CM_1_1
+    public static final int GL_VERSION_ES_CL_1_1
+    public static final int GL_CLIP_PLANE0
+    public static final int GL_CLIP_PLANE1
+    public static final int GL_CLIP_PLANE2
+    public static final int GL_CLIP_PLANE3
+    public static final int GL_CLIP_PLANE4
+    public static final int GL_CLIP_PLANE5
+    public static final int GL_CURRENT_COLOR
+    public static final int GL_CURRENT_NORMAL
+    public static final int GL_CURRENT_TEXTURE_COORDS
+    public static final int GL_POINT_SIZE
+    public static final int GL_POINT_SIZE_MIN
+    public static final int GL_POINT_SIZE_MAX
+    public static final int GL_POINT_FADE_THRESHOLD_SIZE
+    public static final int GL_POINT_DISTANCE_ATTENUATION
+    public static final int GL_LINE_WIDTH
+    public static final int GL_CULL_FACE_MODE
+    public static final int GL_FRONT_FACE
+    public static final int GL_SHADE_MODEL
+    public static final int GL_DEPTH_RANGE
+    public static final int GL_DEPTH_WRITEMASK
+    public static final int GL_DEPTH_CLEAR_VALUE
+    public static final int GL_DEPTH_FUNC
+    public static final int GL_STENCIL_CLEAR_VALUE
+    public static final int GL_STENCIL_FUNC
+    public static final int GL_STENCIL_VALUE_MASK
+    public static final int GL_STENCIL_FAIL
+    public static final int GL_STENCIL_PASS_DEPTH_FAIL
+    public static final int GL_STENCIL_PASS_DEPTH_PASS
+    public static final int GL_STENCIL_REF
+    public static final int GL_STENCIL_WRITEMASK
+    public static final int GL_MATRIX_MODE
+    public static final int GL_VIEWPORT
+    public static final int GL_MODELVIEW_STACK_DEPTH
+    public static final int GL_PROJECTION_STACK_DEPTH
+    public static final int GL_TEXTURE_STACK_DEPTH
+    public static final int GL_MODELVIEW_MATRIX
+    public static final int GL_PROJECTION_MATRIX
+    public static final int GL_TEXTURE_MATRIX
+    public static final int GL_ALPHA_TEST_FUNC
+    public static final int GL_ALPHA_TEST_REF
+    public static final int GL_BLEND_DST
+    public static final int GL_BLEND_SRC
+    public static final int GL_LOGIC_OP_MODE
+    public static final int GL_SCISSOR_BOX
+    public static final int GL_COLOR_CLEAR_VALUE
+    public static final int GL_COLOR_WRITEMASK
+    public static final int GL_MAX_CLIP_PLANES
+    public static final int GL_POLYGON_OFFSET_UNITS
+    public static final int GL_POLYGON_OFFSET_FACTOR
+    public static final int GL_TEXTURE_BINDING_2D
+    public static final int GL_VERTEX_ARRAY_SIZE
+    public static final int GL_VERTEX_ARRAY_TYPE
+    public static final int GL_VERTEX_ARRAY_STRIDE
+    public static final int GL_NORMAL_ARRAY_TYPE
+    public static final int GL_NORMAL_ARRAY_STRIDE
+    public static final int GL_COLOR_ARRAY_SIZE
+    public static final int GL_COLOR_ARRAY_TYPE
+    public static final int GL_COLOR_ARRAY_STRIDE
+    public static final int GL_TEXTURE_COORD_ARRAY_SIZE
+    public static final int GL_TEXTURE_COORD_ARRAY_TYPE
+    public static final int GL_TEXTURE_COORD_ARRAY_STRIDE
+    public static final int GL_VERTEX_ARRAY_POINTER
+    public static final int GL_NORMAL_ARRAY_POINTER
+    public static final int GL_COLOR_ARRAY_POINTER
+    public static final int GL_TEXTURE_COORD_ARRAY_POINTER
+    public static final int GL_SAMPLE_BUFFERS
+    public static final int GL_SAMPLES
+    public static final int GL_SAMPLE_COVERAGE_VALUE
+    public static final int GL_SAMPLE_COVERAGE_INVERT
+    public static final int GL_GENERATE_MIPMAP_HINT
+    public static final int GL_GENERATE_MIPMAP
+    public static final int GL_ACTIVE_TEXTURE
+    public static final int GL_CLIENT_ACTIVE_TEXTURE
+    public static final int GL_ARRAY_BUFFER
+    public static final int GL_ELEMENT_ARRAY_BUFFER
+    public static final int GL_ARRAY_BUFFER_BINDING
+    public static final int GL_ELEMENT_ARRAY_BUFFER_BINDING
+    public static final int GL_VERTEX_ARRAY_BUFFER_BINDING
+    public static final int GL_NORMAL_ARRAY_BUFFER_BINDING
+    public static final int GL_COLOR_ARRAY_BUFFER_BINDING
+    public static final int GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING
+    public static final int GL_STATIC_DRAW
+    public static final int GL_DYNAMIC_DRAW
+    public static final int GL_BUFFER_SIZE
+    public static final int GL_BUFFER_USAGE
+    public static final int GL_SUBTRACT
+    public static final int GL_COMBINE
+    public static final int GL_COMBINE_RGB
+    public static final int GL_COMBINE_ALPHA
+    public static final int GL_RGB_SCALE
+    public static final int GL_ADD_SIGNED
+    public static final int GL_INTERPOLATE
+    public static final int GL_CONSTANT
+    public static final int GL_PRIMARY_COLOR
+    public static final int GL_PREVIOUS
+    public static final int GL_OPERAND0_RGB
+    public static final int GL_OPERAND1_RGB
+    public static final int GL_OPERAND2_RGB
+    public static final int GL_OPERAND0_ALPHA
+    public static final int GL_OPERAND1_ALPHA
+    public static final int GL_OPERAND2_ALPHA
+    public static final int GL_ALPHA_SCALE
+    public static final int GL_SRC0_RGB
+    public static final int GL_SRC1_RGB
+    public static final int GL_SRC2_RGB
+    public static final int GL_SRC0_ALPHA
+    public static final int GL_SRC1_ALPHA
+    public static final int GL_SRC2_ALPHA
+    public static final int GL_DOT3_RGB
+    public static final int GL_DOT3_RGBA
+    public static final int GL_POINT_SIZE_ARRAY_OES
+    public static final int GL_POINT_SIZE_ARRAY_TYPE_OES
+    public static final int GL_POINT_SIZE_ARRAY_STRIDE_OES
+    public static final int GL_POINT_SIZE_ARRAY_POINTER_OES
+    public static final int GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES
+    public static final int GL_POINT_SPRITE_OES
+    public static final int GL_COORD_REPLACE_OES
+    public static final int GL_OES_point_size_array
+    public static final int GL_OES_point_sprite
+    public abstract void glClipPlanef(int,float[],int)
+    public abstract void glClipPlanef(int,java.nio.FloatBuffer)
+    public abstract void glGetClipPlanef(int,float[],int)
+    public abstract void glGetClipPlanef(int,java.nio.FloatBuffer)
+    public abstract void glGetFloatv(int,float[],int)
+    public abstract void glGetFloatv(int,java.nio.FloatBuffer)
+    public abstract void glGetLightfv(int,int,float[],int)
+    public abstract void glGetLightfv(int,int,java.nio.FloatBuffer)
+    public abstract void glGetMaterialfv(int,int,float[],int)
+    public abstract void glGetMaterialfv(int,int,java.nio.FloatBuffer)
+    public abstract void glGetTexParameterfv(int,int,float[],int)
+    public abstract void glGetTexParameterfv(int,int,java.nio.FloatBuffer)
+    public abstract void glPointParameterf(int,float)
+    public abstract void glPointParameterfv(int,float[],int)
+    public abstract void glPointParameterfv(int,java.nio.FloatBuffer)
+    public abstract void glTexParameterfv(int,int,float[],int)
+    public abstract void glTexParameterfv(int,int,java.nio.FloatBuffer)
+    public abstract void glColor4ub(byte,byte,byte,byte)
+    public abstract void glDeleteBuffers(int,int[],int)
+    public abstract void glDeleteBuffers(int,java.nio.IntBuffer)
+    public abstract void glGetBooleanv(int,boolean[],int)
+    public abstract void glGetBooleanv(int,java.nio.IntBuffer)
+    public abstract void glGetBufferParameteriv(int,int,int[],int)
+    public abstract void glGetBufferParameteriv(int,int,java.nio.IntBuffer)
+    public abstract void glGenBuffers(int,int[],int)
+    public abstract void glGetPointerv(int,java.nio.Buffer[])
+    public abstract void glGetTexEnviv(int,int,int[],int)
+    public abstract void glGetTexEnviv(int,int,java.nio.IntBuffer)
+    public abstract void glGetTexParameteriv(int,int,int[],int)
+    public abstract void glGetTexParameteriv(int,int,java.nio.IntBuffer)
+    public abstract boolean glIsBuffer(int)
+    public abstract boolean glIsEnabled(int)
+    public abstract boolean glIsTexture(int)
+    public abstract void glTexEnvi(int,int,int)
+    public abstract void glTexEnviv(int,int,int[],int)
+    public abstract void glTexEnviv(int,int,java.nio.IntBuffer)
+    public abstract void glTexParameteri(int,int,int)
+    public abstract void glTexParameteriv(int,int,int[],int)
+    public abstract void glTexParameteriv(int,int,java.nio.IntBuffer)
+    public abstract void glPointSizePointerOES(int,int,java.nio.Buffer)
+com.badlogic.gdx.graphics.GL20:
+    public static final int GL_ES_VERSION_2_0
+    public static final int GL_DEPTH_BUFFER_BIT
+    public static final int GL_STENCIL_BUFFER_BIT
+    public static final int GL_COLOR_BUFFER_BIT
+    public static final int GL_FALSE
+    public static final int GL_TRUE
+    public static final int GL_POINTS
+    public static final int GL_LINES
+    public static final int GL_LINE_LOOP
+    public static final int GL_LINE_STRIP
+    public static final int GL_TRIANGLES
+    public static final int GL_TRIANGLE_STRIP
+    public static final int GL_TRIANGLE_FAN
+    public static final int GL_ZERO
+    public static final int GL_ONE
+    public static final int GL_SRC_COLOR
+    public static final int GL_ONE_MINUS_SRC_COLOR
+    public static final int GL_SRC_ALPHA
+    public static final int GL_ONE_MINUS_SRC_ALPHA
+    public static final int GL_DST_ALPHA
+    public static final int GL_ONE_MINUS_DST_ALPHA
+    public static final int GL_DST_COLOR
+    public static final int GL_ONE_MINUS_DST_COLOR
+    public static final int GL_SRC_ALPHA_SATURATE
+    public static final int GL_FUNC_ADD
+    public static final int GL_BLEND_EQUATION
+    public static final int GL_BLEND_EQUATION_RGB
+    public static final int GL_BLEND_EQUATION_ALPHA
+    public static final int GL_FUNC_SUBTRACT
+    public static final int GL_FUNC_REVERSE_SUBTRACT
+    public static final int GL_BLEND_DST_RGB
+    public static final int GL_BLEND_SRC_RGB
+    public static final int GL_BLEND_DST_ALPHA
+    public static final int GL_BLEND_SRC_ALPHA
+    public static final int GL_CONSTANT_COLOR
+    public static final int GL_ONE_MINUS_CONSTANT_COLOR
+    public static final int GL_CONSTANT_ALPHA
+    public static final int GL_ONE_MINUS_CONSTANT_ALPHA
+    public static final int GL_BLEND_COLOR
+    public static final int GL_ARRAY_BUFFER
+    public static final int GL_ELEMENT_ARRAY_BUFFER
+    public static final int GL_ARRAY_BUFFER_BINDING
+    public static final int GL_ELEMENT_ARRAY_BUFFER_BINDING
+    public static final int GL_STREAM_DRAW
+    public static final int GL_STATIC_DRAW
+    public static final int GL_DYNAMIC_DRAW
+    public static final int GL_BUFFER_SIZE
+    public static final int GL_BUFFER_USAGE
+    public static final int GL_CURRENT_VERTEX_ATTRIB
+    public static final int GL_FRONT
+    public static final int GL_BACK
+    public static final int GL_FRONT_AND_BACK
+    public static final int GL_TEXTURE_2D
+    public static final int GL_CULL_FACE
+    public static final int GL_BLEND
+    public static final int GL_DITHER
+    public static final int GL_STENCIL_TEST
+    public static final int GL_DEPTH_TEST
+    public static final int GL_SCISSOR_TEST
+    public static final int GL_POLYGON_OFFSET_FILL
+    public static final int GL_SAMPLE_ALPHA_TO_COVERAGE
+    public static final int GL_SAMPLE_COVERAGE
+    public static final int GL_NO_ERROR
+    public static final int GL_INVALID_ENUM
+    public static final int GL_INVALID_VALUE
+    public static final int GL_INVALID_OPERATION
+    public static final int GL_OUT_OF_MEMORY
+    public static final int GL_CW
+    public static final int GL_CCW
+    public static final int GL_LINE_WIDTH
+    public static final int GL_ALIASED_POINT_SIZE_RANGE
+    public static final int GL_ALIASED_LINE_WIDTH_RANGE
+    public static final int GL_CULL_FACE_MODE
+    public static final int GL_FRONT_FACE
+    public static final int GL_DEPTH_RANGE
+    public static final int GL_DEPTH_WRITEMASK
+    public static final int GL_DEPTH_CLEAR_VALUE
+    public static final int GL_DEPTH_FUNC
+    public static final int GL_STENCIL_CLEAR_VALUE
+    public static final int GL_STENCIL_FUNC
+    public static final int GL_STENCIL_FAIL
+    public static final int GL_STENCIL_PASS_DEPTH_FAIL
+    public static final int GL_STENCIL_PASS_DEPTH_PASS
+    public static final int GL_STENCIL_REF
+    public static final int GL_STENCIL_VALUE_MASK
+    public static final int GL_STENCIL_WRITEMASK
+    public static final int GL_STENCIL_BACK_FUNC
+    public static final int GL_STENCIL_BACK_FAIL
+    public static final int GL_STENCIL_BACK_PASS_DEPTH_FAIL
+    public static final int GL_STENCIL_BACK_PASS_DEPTH_PASS
+    public static final int GL_STENCIL_BACK_REF
+    public static final int GL_STENCIL_BACK_VALUE_MASK
+    public static final int GL_STENCIL_BACK_WRITEMASK
+    public static final int GL_VIEWPORT
+    public static final int GL_SCISSOR_BOX
+    public static final int GL_COLOR_CLEAR_VALUE
+    public static final int GL_COLOR_WRITEMASK
+    public static final int GL_UNPACK_ALIGNMENT
+    public static final int GL_PACK_ALIGNMENT
+    public static final int GL_MAX_TEXTURE_SIZE
+    public static final int GL_MAX_VIEWPORT_DIMS
+    public static final int GL_SUBPIXEL_BITS
+    public static final int GL_RED_BITS
+    public static final int GL_GREEN_BITS
+    public static final int GL_BLUE_BITS
+    public static final int GL_ALPHA_BITS
+    public static final int GL_DEPTH_BITS
+    public static final int GL_STENCIL_BITS
+    public static final int GL_POLYGON_OFFSET_UNITS
+    public static final int GL_POLYGON_OFFSET_FACTOR
+    public static final int GL_TEXTURE_BINDING_2D
+    public static final int GL_SAMPLE_BUFFERS
+    public static final int GL_SAMPLES
+    public static final int GL_SAMPLE_COVERAGE_VALUE
+    public static final int GL_SAMPLE_COVERAGE_INVERT
+    public static final int GL_NUM_COMPRESSED_TEXTURE_FORMATS
+    public static final int GL_COMPRESSED_TEXTURE_FORMATS
+    public static final int GL_DONT_CARE
+    public static final int GL_FASTEST
+    public static final int GL_NICEST
+    public static final int GL_GENERATE_MIPMAP_HINT
+    public static final int GL_BYTE
+    public static final int GL_UNSIGNED_BYTE
+    public static final int GL_SHORT
+    public static final int GL_UNSIGNED_SHORT
+    public static final int GL_INT
+    public static final int GL_UNSIGNED_INT
+    public static final int GL_FLOAT
+    public static final int GL_FIXED
+    public static final int GL_DEPTH_COMPONENT
+    public static final int GL_ALPHA
+    public static final int GL_RGB
+    public static final int GL_RGBA
+    public static final int GL_LUMINANCE
+    public static final int GL_LUMINANCE_ALPHA
+    public static final int GL_UNSIGNED_SHORT_4_4_4_4
+    public static final int GL_UNSIGNED_SHORT_5_5_5_1
+    public static final int GL_UNSIGNED_SHORT_5_6_5
+    public static final int GL_FRAGMENT_SHADER
+    public static final int GL_VERTEX_SHADER
+    public static final int GL_MAX_VERTEX_ATTRIBS
+    public static final int GL_MAX_VERTEX_UNIFORM_VECTORS
+    public static final int GL_MAX_VARYING_VECTORS
+    public static final int GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS
+    public static final int GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS
+    public static final int GL_MAX_TEXTURE_IMAGE_UNITS
+    public static final int GL_MAX_FRAGMENT_UNIFORM_VECTORS
+    public static final int GL_SHADER_TYPE
+    public static final int GL_DELETE_STATUS
+    public static final int GL_LINK_STATUS
+    public static final int GL_VALIDATE_STATUS
+    public static final int GL_ATTACHED_SHADERS
+    public static final int GL_ACTIVE_UNIFORMS
+    public static final int GL_ACTIVE_UNIFORM_MAX_LENGTH
+    public static final int GL_ACTIVE_ATTRIBUTES
+    public static final int GL_ACTIVE_ATTRIBUTE_MAX_LENGTH
+    public static final int GL_SHADING_LANGUAGE_VERSION
+    public static final int GL_CURRENT_PROGRAM
+    public static final int GL_NEVER
+    public static final int GL_LESS
+    public static final int GL_EQUAL
+    public static final int GL_LEQUAL
+    public static final int GL_GREATER
+    public static final int GL_NOTEQUAL
+    public static final int GL_GEQUAL
+    public static final int GL_ALWAYS
+    public static final int GL_KEEP
+    public static final int GL_REPLACE
+    public static final int GL_INCR
+    public static final int GL_DECR
+    public static final int GL_INVERT
+    public static final int GL_INCR_WRAP
+    public static final int GL_DECR_WRAP
+    public static final int GL_VENDOR
+    public static final int GL_RENDERER
+    public static final int GL_VERSION
+    public static final int GL_EXTENSIONS
+    public static final int GL_NEAREST
+    public static final int GL_LINEAR
+    public static final int GL_NEAREST_MIPMAP_NEAREST
+    public static final int GL_LINEAR_MIPMAP_NEAREST
+    public static final int GL_NEAREST_MIPMAP_LINEAR
+    public static final int GL_LINEAR_MIPMAP_LINEAR
+    public static final int GL_TEXTURE_MAG_FILTER
+    public static final int GL_TEXTURE_MIN_FILTER
+    public static final int GL_TEXTURE_WRAP_S
+    public static final int GL_TEXTURE_WRAP_T
+    public static final int GL_TEXTURE
+    public static final int GL_TEXTURE_CUBE_MAP
+    public static final int GL_TEXTURE_BINDING_CUBE_MAP
+    public static final int GL_TEXTURE_CUBE_MAP_POSITIVE_X
+    public static final int GL_TEXTURE_CUBE_MAP_NEGATIVE_X
+    public static final int GL_TEXTURE_CUBE_MAP_POSITIVE_Y
+    public static final int GL_TEXTURE_CUBE_MAP_NEGATIVE_Y
+    public static final int GL_TEXTURE_CUBE_MAP_POSITIVE_Z
+    public static final int GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+    public static final int GL_MAX_CUBE_MAP_TEXTURE_SIZE
+    public static final int GL_TEXTURE0
+    public static final int GL_TEXTURE1
+    public static final int GL_TEXTURE2
+    public static final int GL_TEXTURE3
+    public static final int GL_TEXTURE4
+    public static final int GL_TEXTURE5
+    public static final int GL_TEXTURE6
+    public static final int GL_TEXTURE7
+    public static final int GL_TEXTURE8
+    public static final int GL_TEXTURE9
+    public static final int GL_TEXTURE10
+    public static final int GL_TEXTURE11
+    public static final int GL_TEXTURE12
+    public static final int GL_TEXTURE13
+    public static final int GL_TEXTURE14
+    public static final int GL_TEXTURE15
+    public static final int GL_TEXTURE16
+    public static final int GL_TEXTURE17
+    public static final int GL_TEXTURE18
+    public static final int GL_TEXTURE19
+    public static final int GL_TEXTURE20
+    public static final int GL_TEXTURE21
+    public static final int GL_TEXTURE22
+    public static final int GL_TEXTURE23
+    public static final int GL_TEXTURE24
+    public static final int GL_TEXTURE25
+    public static final int GL_TEXTURE26
+    public static final int GL_TEXTURE27
+    public static final int GL_TEXTURE28
+    public static final int GL_TEXTURE29
+    public static final int GL_TEXTURE30
+    public static final int GL_TEXTURE31
+    public static final int GL_ACTIVE_TEXTURE
+    public static final int GL_REPEAT
+    public static final int GL_CLAMP_TO_EDGE
+    public static final int GL_MIRRORED_REPEAT
+    public static final int GL_FLOAT_VEC2
+    public static final int GL_FLOAT_VEC3
+    public static final int GL_FLOAT_VEC4
+    public static final int GL_INT_VEC2
+    public static final int GL_INT_VEC3
+    public static final int GL_INT_VEC4
+    public static final int GL_BOOL
+    public static final int GL_BOOL_VEC2
+    public static final int GL_BOOL_VEC3
+    public static final int GL_BOOL_VEC4
+    public static final int GL_FLOAT_MAT2
+    public static final int GL_FLOAT_MAT3
+    public static final int GL_FLOAT_MAT4
+    public static final int GL_SAMPLER_2D
+    public static final int GL_SAMPLER_CUBE
+    public static final int GL_VERTEX_ATTRIB_ARRAY_ENABLED
+    public static final int GL_VERTEX_ATTRIB_ARRAY_SIZE
+    public static final int GL_VERTEX_ATTRIB_ARRAY_STRIDE
+    public static final int GL_VERTEX_ATTRIB_ARRAY_TYPE
+    public static final int GL_VERTEX_ATTRIB_ARRAY_NORMALIZED
+    public static final int GL_VERTEX_ATTRIB_ARRAY_POINTER
+    public static final int GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING
+    public static final int GL_IMPLEMENTATION_COLOR_READ_TYPE
+    public static final int GL_IMPLEMENTATION_COLOR_READ_FORMAT
+    public static final int GL_COMPILE_STATUS
+    public static final int GL_INFO_LOG_LENGTH
+    public static final int GL_SHADER_SOURCE_LENGTH
+    public static final int GL_SHADER_COMPILER
+    public static final int GL_SHADER_BINARY_FORMATS
+    public static final int GL_NUM_SHADER_BINARY_FORMATS
+    public static final int GL_LOW_FLOAT
+    public static final int GL_MEDIUM_FLOAT
+    public static final int GL_HIGH_FLOAT
+    public static final int GL_LOW_INT
+    public static final int GL_MEDIUM_INT
+    public static final int GL_HIGH_INT
+    public static final int GL_FRAMEBUFFER
+    public static final int GL_RENDERBUFFER
+    public static final int GL_RGBA4
+    public static final int GL_RGB5_A1
+    public static final int GL_RGB565
+    public static final int GL_DEPTH_COMPONENT16
+    public static final int GL_STENCIL_INDEX
+    public static final int GL_STENCIL_INDEX8
+    public static final int GL_RENDERBUFFER_WIDTH
+    public static final int GL_RENDERBUFFER_HEIGHT
+    public static final int GL_RENDERBUFFER_INTERNAL_FORMAT
+    public static final int GL_RENDERBUFFER_RED_SIZE
+    public static final int GL_RENDERBUFFER_GREEN_SIZE
+    public static final int GL_RENDERBUFFER_BLUE_SIZE
+    public static final int GL_RENDERBUFFER_ALPHA_SIZE
+    public static final int GL_RENDERBUFFER_DEPTH_SIZE
+    public static final int GL_RENDERBUFFER_STENCIL_SIZE
+    public static final int GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE
+    public static final int GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME
+    public static final int GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL
+    public static final int GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE
+    public static final int GL_COLOR_ATTACHMENT0
+    public static final int GL_DEPTH_ATTACHMENT
+    public static final int GL_STENCIL_ATTACHMENT
+    public static final int GL_NONE
+    public static final int GL_FRAMEBUFFER_COMPLETE
+    public static final int GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT
+    public static final int GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT
+    public static final int GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS
+    public static final int GL_FRAMEBUFFER_UNSUPPORTED
+    public static final int GL_FRAMEBUFFER_BINDING
+    public static final int GL_RENDERBUFFER_BINDING
+    public static final int GL_MAX_RENDERBUFFER_SIZE
+    public static final int GL_INVALID_FRAMEBUFFER_OPERATION
+    public static final int GL_VERTEX_PROGRAM_POINT_SIZE
+    public abstract void glBindAttribLocation(int,int,java.lang.String)
+    public abstract void glBlendColor(float,float,float,float)
+    public abstract void glBlendEquation(int)
+    public abstract void glBlendEquationSeparate(int,int)
+    public abstract void glBlendFuncSeparate(int,int,int,int)
+    public abstract void glDeleteBuffers(int,java.nio.IntBuffer)
+    public abstract void glDeleteProgram(int)
+    public abstract void glDeleteShader(int)
+    public abstract void glDetachShader(int,int)
+    public abstract void glGenerateMipmap(int)
+    public abstract java.lang.String glGetActiveAttrib(int,int,java.nio.IntBuffer,java.nio.Buffer)
+    public abstract java.lang.String glGetActiveUniform(int,int,java.nio.IntBuffer,java.nio.Buffer)
+    public abstract void glGetAttachedShaders(int,int,java.nio.Buffer,java.nio.IntBuffer)
+    public abstract void glGetBooleanv(int,java.nio.Buffer)
+    public abstract void glGetBufferParameteriv(int,int,java.nio.IntBuffer)
+    public abstract void glGetFloatv(int,java.nio.FloatBuffer)
+    public abstract void glGetFramebufferAttachmentParameteriv(int,int,int,java.nio.IntBuffer)
+    public abstract void glGetRenderbufferParameteriv(int,int,java.nio.IntBuffer)
+    public abstract void glGetShaderPrecisionFormat(int,int,java.nio.IntBuffer,java.nio.IntBuffer)
+    public abstract void glGetShaderSource(int,int,java.nio.Buffer,java.lang.String)
+    public abstract void glGetTexParameterfv(int,int,java.nio.FloatBuffer)
+    public abstract void glGetTexParameteriv(int,int,java.nio.IntBuffer)
+    public abstract void glGetUniformfv(int,int,java.nio.FloatBuffer)
+    public abstract void glGetUniformiv(int,int,java.nio.IntBuffer)
+    public abstract void glGetVertexAttribfv(int,int,java.nio.FloatBuffer)
+    public abstract void glGetVertexAttribiv(int,int,java.nio.IntBuffer)
+    public abstract void glGetVertexAttribPointerv(int,int,java.nio.Buffer)
+    public abstract boolean glIsBuffer(int)
+    public abstract boolean glIsEnabled(int)
+    public abstract boolean glIsFramebuffer(int)
+    public abstract boolean glIsProgram(int)
+    public abstract boolean glIsRenderbuffer(int)
+    public abstract boolean glIsShader(int)
+    public abstract boolean glIsTexture(int)
+    public abstract void glReleaseShaderCompiler()
+    public abstract void glSampleCoverage(float,boolean)
+    public abstract void glShaderBinary(int,java.nio.IntBuffer,int,java.nio.Buffer,int)
+    public abstract void glStencilFuncSeparate(int,int,int,int)
+    public abstract void glStencilMaskSeparate(int,int)
+    public abstract void glStencilOpSeparate(int,int,int,int)
+    public abstract void glTexParameterfv(int,int,java.nio.FloatBuffer)
+    public abstract void glTexParameteri(int,int,int)
+    public abstract void glTexParameteriv(int,int,java.nio.IntBuffer)
+    public abstract void glUniform1f(int,float)
+    public abstract void glUniform1fv(int,int,java.nio.FloatBuffer)
+    public abstract void glUniform1iv(int,int,java.nio.IntBuffer)
+    public abstract void glUniform2f(int,float,float)
+    public abstract void glUniform2fv(int,int,java.nio.FloatBuffer)
+    public abstract void glUniform2i(int,int,int)
+    public abstract void glUniform2iv(int,int,java.nio.IntBuffer)
+    public abstract void glUniform3f(int,float,float,float)
+    public abstract void glUniform3fv(int,int,java.nio.FloatBuffer)
+    public abstract void glUniform3i(int,int,int,int)
+    public abstract void glUniform3iv(int,int,java.nio.IntBuffer)
+    public abstract void glUniform4f(int,float,float,float,float)
+    public abstract void glUniform4fv(int,int,java.nio.FloatBuffer)
+    public abstract void glUniform4i(int,int,int,int,int)
+    public abstract void glUniform4iv(int,int,java.nio.IntBuffer)
+    public abstract void glUniformMatrix2fv(int,int,boolean,java.nio.FloatBuffer)
+    public abstract void glUniformMatrix3fv(int,int,boolean,java.nio.FloatBuffer)
+    public abstract void glValidateProgram(int)
+    public abstract void glVertexAttrib1f(int,float)
+    public abstract void glVertexAttrib1fv(int,java.nio.FloatBuffer)
+    public abstract void glVertexAttrib2f(int,float,float)
+    public abstract void glVertexAttrib2fv(int,java.nio.FloatBuffer)
+    public abstract void glVertexAttrib3f(int,float,float,float)
+    public abstract void glVertexAttrib3fv(int,java.nio.FloatBuffer)
+    public abstract void glVertexAttrib4f(int,float,float,float,float)
+    public abstract void glVertexAttrib4fv(int,java.nio.FloatBuffer)
+    public abstract void glVertexAttribPointer(int,int,int,boolean,int,java.nio.Buffer)
+com.badlogic.gdx.graphics.GLCommon:
+    public abstract void glActiveTexture(int)
+    public abstract void glClearDepthf(float)
+    public abstract void glClearStencil(int)
+    public abstract void glColorMask(boolean,boolean,boolean,boolean)
+    public abstract void glCompressedTexImage2D(int,int,int,int,int,int,int,java.nio.Buffer)
+    public abstract void glCompressedTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+    public abstract void glCopyTexImage2D(int,int,int,int,int,int,int,int)
+    public abstract void glCopyTexSubImage2D(int,int,int,int,int,int,int,int)
+    public abstract void glCullFace(int)
+    public abstract void glDepthFunc(int)
+    public abstract void glDepthRangef(float,float)
+    public abstract void glFinish()
+    public abstract void glFlush()
+    public abstract void glFrontFace(int)
+    public abstract int glGetError()
+    public abstract void glGetIntegerv(int,java.nio.IntBuffer)
+    public abstract java.lang.String glGetString(int)
+    public abstract void glHint(int,int)
+    public abstract void glLineWidth(float)
+    public abstract void glPixelStorei(int,int)
+    public abstract void glPolygonOffset(float,float)
+    public abstract void glReadPixels(int,int,int,int,int,int,java.nio.Buffer)
+    public abstract void glScissor(int,int,int,int)
+    public abstract void glStencilFunc(int,int,int)
+    public abstract void glStencilMask(int)
+    public abstract void glStencilOp(int,int,int)
+    public abstract void glTexSubImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer)
+com.badlogic.gdx.graphics.GLU:
+    public abstract void gluLookAt(com.badlogic.gdx.graphics.GL10,float,float,float,float,float,float,float,float,float)
+    public abstract void gluOrtho2D(com.badlogic.gdx.graphics.GL10,float,float,float,float)
+    public abstract void gluPerspective(com.badlogic.gdx.graphics.GL10,float,float,float,float)
+    public abstract boolean gluProject(float,float,float,float[],int,float[],int,int[],int,float[],int)
+    public abstract boolean gluUnProject(float,float,float,float[],int,float[],int,int[],int,float[],int)
+com.badlogic.gdx.graphics.Mesh:
+    124:136:public Mesh(boolean,int,int,com.badlogic.gdx.graphics.VertexAttributes)
+    195:201:public void getVertices(float[])
+    220:221:public void setIndices(short[],int,int)
+    229:235:public void getIndices(short[])
+    241:241:public int getNumIndices()
+    248:248:public int getNumVertices()
+    255:255:public int getMaxVertices()
+    262:262:public int getMaxIndices()
+    269:269:public int getVertexSize()
+    281:282:public void setAutoBind(boolean)
+    343:344:public void render(int)
+    410:411:public void render(com.badlogic.gdx.graphics.glutils.ShaderProgram,int)
+    455:458:public void dispose()
+    467:472:public com.badlogic.gdx.graphics.VertexAttribute getVertexAttribute(int)
+    479:479:public com.badlogic.gdx.graphics.VertexAttributes getVertexAttributes()
+    486:486:public java.nio.FloatBuffer getVerticesBuffer()
+    497:530:public com.badlogic.gdx.math.collision.BoundingBox calculateBoundingBox()
+    537:537:public java.nio.ShortBuffer getIndicesBuffer()
+com.badlogic.gdx.graphics.OrthographicCamera
+com.badlogic.gdx.graphics.PerspectiveCamera
+com.badlogic.gdx.graphics.Pixmap:
+    113:114:public static void setFilter(com.badlogic.gdx.graphics.Pixmap$Filter)
+    165:166:public void setColor(com.badlogic.gdx.graphics.Color)
+    204:205:public void drawRectangle(int,int,int,int)
+    252:253:public void fillRectangle(int,int,int,int)
+    263:264:public void drawCircle(int,int,int)
+    274:275:public void fillCircle(int,int,int)
+    286:286:public int getPixel(int,int)
+com.badlogic.gdx.graphics.Pixmap$Filter
+com.badlogic.gdx.graphics.Texture:
+    109:110:public Texture(java.lang.String)
+    195:196:public Texture(com.badlogic.gdx.graphics.Pixmap)
+    256:270:public Texture(com.badlogic.gdx.graphics.TextureData)
+    352:354:public void bind(int)
+    365:390:public void draw(com.badlogic.gdx.graphics.Pixmap,int,int)
+    412:412:public boolean isManaged()
+    517:517:public com.badlogic.gdx.graphics.Pixmap$Format getFormat()
+    521:522:public static void setEnforcePotImages(boolean)
+com.badlogic.gdx.graphics.TextureData:
+    public abstract int getWidth()
+    public abstract int getHeight()
+com.badlogic.gdx.graphics.TextureDict
+com.badlogic.gdx.graphics.TextureRef
+com.badlogic.gdx.graphics.VertexAttributes$Usage
+com.badlogic.gdx.graphics.g2d.Animation
+com.badlogic.gdx.graphics.g2d.BitmapFont
+com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph
+com.badlogic.gdx.graphics.g2d.BitmapFont$HAlignment
+com.badlogic.gdx.graphics.g2d.BitmapFont$TextBounds
+com.badlogic.gdx.graphics.g2d.BitmapFontCache
+com.badlogic.gdx.graphics.g2d.Gdx2DPixmap:
+    public static final int GDX2D_FORMAT_ALPHA
+    public static final int GDX2D_FORMAT_LUMINANCE_ALPHA
+    public static final int GDX2D_FORMAT_RGB888
+    public static final int GDX2D_FORMAT_RGBA8888
+    public static final int GDX2D_FORMAT_RGB565
+    public static final int GDX2D_FORMAT_RGBA4444
+    public static final int GDX2D_SCALE_NEAREST
+    public static final int GDX2D_SCALE_LINEAR
+    public static final int GDX2D_BLEND_NONE
+    public static final int GDX2D_BLEND_SRC_OVER
+    102:102:public int getPixel(int,int)
+    110:111:public void drawRect(int,int,int,int,int)
+    114:115:public void drawCircle(int,int,int,int)
+    118:119:public void fillRect(int,int,int,int,int)
+    122:123:public void fillCircle(int,int,int,int)
+    138:140:public static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap newPixmap(java.io.InputStream,int)
+    146:148:public static com.badlogic.gdx.graphics.g2d.Gdx2DPixmap newPixmap(int,int,int)
+    private static native int getPixel(long,int,int)
+    private static native void drawRect(long,int,int,int,int,int)
+    private static native void drawCircle(long,int,int,int,int)
+    private static native void fillRect(long,int,int,int,int,int)
+    private static native void fillCircle(long,int,int,int,int)
+    222:236:public java.lang.String getFormatString()
+com.badlogic.gdx.graphics.g2d.ParticleEffect
+com.badlogic.gdx.graphics.g2d.ParticleEmitter
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$1
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$GradientColorValue
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$NumericValue
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$Particle
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$ParticleValue
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$RangedNumericValue
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$ScaledNumericValue
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$SpawnEllipseSide
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$SpawnShape
+com.badlogic.gdx.graphics.g2d.ParticleEmitter$SpawnShapeValue
+com.badlogic.gdx.graphics.g2d.Sprite:
+    static final int VERTEX_SIZE
+    static final int SPRITE_SIZE
+    public static final int X1
+    public static final int Y1
+    public static final int C1
+    public static final int U1
+    public static final int V1
+    public static final int X2
+    public static final int Y2
+    public static final int C2
+    public static final int U2
+    public static final int V2
+    public static final int X3
+    public static final int Y3
+    public static final int C3
+    public static final int U3
+    public static final int V3
+    public static final int X4
+    public static final int Y4
+    public static final int C4
+    public static final int U4
+    public static final int V4
+    58:59:public Sprite(com.badlogic.gdx.graphics.Texture)
+    67:68:public Sprite(com.badlogic.gdx.graphics.Texture,int,int)
+    98:103:public Sprite(com.badlogic.gdx.graphics.g2d.TextureRegion,int,int,int,int)
+    108:110:public Sprite(com.badlogic.gdx.graphics.g2d.Sprite)
+    113:126:public void set(com.badlogic.gdx.graphics.g2d.Sprite)
+    221:227:public void setColor(com.badlogic.gdx.graphics.Color)
+    249:251:public void setRotation(float)
+    257:259:public void rotate(float)
+    296:299:public void setScale(float)
+    302:305:public void setScale(float,float)
+    311:314:public void scale(float)
+    395:423:public com.badlogic.gdx.math.Rectangle getBoundingRectangle()
+    431:438:public void draw(com.badlogic.gdx.graphics.g2d.SpriteBatch,float)
+    441:441:public float getX()
+    445:445:public float getY()
+    457:457:public float getOriginX()
+    461:461:public float getOriginY()
+    465:465:public float getRotation()
+    469:469:public float getScaleX()
+    473:473:public float getScaleY()
+    481:488:public com.badlogic.gdx.graphics.Color getColor()
+    512:515:public void setU(float)
+    518:521:public void setV(float)
+    524:527:public void setU2(float)
+    530:533:public void setV2(float)
+    561:582:public void scroll(float,float)
+com.badlogic.gdx.graphics.g2d.SpriteBatch:
+    172:201:public SpriteBatch(int,int)
+    305:306:public void setColor(com.badlogic.gdx.graphics.Color)
+    312:314:public void setColor(float,float,float,float)
+    321:322:public void setColor(float)
+    328:334:public com.badlogic.gdx.graphics.Color getColor()
+    363:486:public void draw(com.badlogic.gdx.graphics.Texture,float,float,float,float,float,float,float,float,float,int,int,int,int,boolean,boolean)
+    507:558:public void draw(com.badlogic.gdx.graphics.Texture,float,float,float,float,int,int,int,int,boolean,boolean)
+    573:612:public void draw(com.badlogic.gdx.graphics.Texture,float,float,int,int,int,int)
+    670:705:public void draw(com.badlogic.gdx.graphics.Texture,float,float)
+    729:730:public void draw(com.badlogic.gdx.graphics.g2d.TextureRegion,float,float)
+    736:777:public void draw(com.badlogic.gdx.graphics.g2d.TextureRegion,float,float,float,float)
+    787:900:public void draw(com.badlogic.gdx.graphics.g2d.TextureRegion,float,float,float,float,float,float,float,float,float)
+    906:907:public void flush()
+    953:955:public void disableBlending()
+    961:963:public void enableBlending()
+    972:975:public void setBlendFunction(int,int)
+    981:984:public void dispose()
+    1001:1001:public com.badlogic.gdx.math.Matrix4 getTransformMatrix()
+    1010:1013:public void setProjectionMatrix(com.badlogic.gdx.math.Matrix4)
+    1021:1024:public void setTransformMatrix(com.badlogic.gdx.math.Matrix4)
+    1037:1038:public void setShader(com.badlogic.gdx.graphics.glutils.ShaderProgram)
+com.badlogic.gdx.graphics.g2d.SpriteCache
+com.badlogic.gdx.graphics.g2d.SpriteCache$Cache
+com.badlogic.gdx.graphics.g2d.TextureAtlas:
+    63:64:public TextureAtlas(java.lang.String)
+    78:79:public TextureAtlas(com.badlogic.gdx.files.FileHandle,boolean)
+    173:180:public com.badlogic.gdx.graphics.g2d.TextureAtlas$AtlasRegion addRegion(java.lang.String,com.badlogic.gdx.graphics.Texture,int,int,int,int)
+    187:187:public com.badlogic.gdx.graphics.g2d.TextureAtlas$AtlasRegion addRegion(java.lang.String,com.badlogic.gdx.graphics.g2d.TextureRegion)
+    195:195:public java.util.List getRegions()
+    204:206:public com.badlogic.gdx.graphics.g2d.TextureAtlas$AtlasRegion findRegion(java.lang.String)
+    215:221:public com.badlogic.gdx.graphics.g2d.TextureAtlas$AtlasRegion findRegion(java.lang.String,int)
+    229:234:public java.util.List findRegions(java.lang.String)
+    243:246:public java.util.List createSprites()
+    268:274:public com.badlogic.gdx.graphics.g2d.Sprite createSprite(java.lang.String,int)
+    284:289:public java.util.List createSprites(java.lang.String)
+    306:309:public void dispose()
+com.badlogic.gdx.graphics.g2d.TextureAtlas$AtlasSprite:
+    463:463:public float getX()
+    467:467:public float getY()
+    471:471:public com.badlogic.gdx.graphics.g2d.TextureAtlas$AtlasRegion getAtlasRegion()
+com.badlogic.gdx.graphics.g2d.TextureRegion:
+    40:43:public TextureRegion(com.badlogic.gdx.graphics.Texture)
+    54:57:public TextureRegion(com.badlogic.gdx.graphics.Texture,float,float,float,float)
+    71:73:public TextureRegion(com.badlogic.gdx.graphics.g2d.TextureRegion,int,int,int,int)
+    79:81:public void setRegion(com.badlogic.gdx.graphics.Texture)
+    112:114:public void setRegion(com.badlogic.gdx.graphics.g2d.TextureRegion,int,int,int,int)
+    121:122:public void setTexture(com.badlogic.gdx.graphics.Texture)
+    125:125:public float getU()
+    129:130:public void setU(float)
+    133:133:public float getV()
+    137:138:public void setV(float)
+    141:141:public float getU2()
+    145:146:public void setU2(float)
+    149:149:public float getV2()
+    153:154:public void setV2(float)
+    157:157:public int getRegionX()
+    161:162:public void setRegionX(int)
+    165:165:public int getRegionY()
+    169:170:public void setRegionY(int)
+    180:181:public void setRegionWidth(int)
+    191:192:public void setRegionHeight(int)
+    214:224:public void scroll(float,float)
+    239:266:public com.badlogic.gdx.graphics.g2d.TextureRegion[][] split(int,int)
+    283:284:public static com.badlogic.gdx.graphics.g2d.TextureRegion[][] split(com.badlogic.gdx.graphics.Texture,int,int)
+com.badlogic.gdx.graphics.g2d.tiled.TileAtlas
+com.badlogic.gdx.graphics.g2d.tiled.TileMapRenderer
+com.badlogic.gdx.graphics.g2d.tiled.TileSet
+com.badlogic.gdx.graphics.g2d.tiled.TiledLayer
+com.badlogic.gdx.graphics.g2d.tiled.TiledLoader
+com.badlogic.gdx.graphics.g2d.tiled.TiledLoader$1
+com.badlogic.gdx.graphics.g2d.tiled.TiledMap
+com.badlogic.gdx.graphics.g2d.tiled.TiledMap$TileProperty
+com.badlogic.gdx.graphics.g2d.tiled.TiledObject
+com.badlogic.gdx.graphics.g2d.tiled.TiledObjectGroup
+com.badlogic.gdx.graphics.g3d.Animation
+com.badlogic.gdx.graphics.g3d.Animator
+com.badlogic.gdx.graphics.g3d.Animator$1
+com.badlogic.gdx.graphics.g3d.Animator$WrapMode
+com.badlogic.gdx.graphics.g3d.Material
+com.badlogic.gdx.graphics.g3d.keyframed.Keyframe
+com.badlogic.gdx.graphics.g3d.keyframed.KeyframeAnimation
+com.badlogic.gdx.graphics.g3d.keyframed.KeyframeAnimator
+com.badlogic.gdx.graphics.g3d.keyframed.KeyframedModel
+com.badlogic.gdx.graphics.g3d.loaders.ModelLoader
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Animation
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5AnimationInfo
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Animator
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Jni
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Joints
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Loader
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Loader$BaseFrameJoint
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Loader$JointInfo
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Mesh
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Model
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Quaternion
+com.badlogic.gdx.graphics.g3d.loaders.md5.MD5Renderer
+com.badlogic.gdx.graphics.g3d.loaders.obj.ObjLoader
+com.badlogic.gdx.graphics.glutils.FrameBuffer:
+    87:94:public FrameBuffer(com.badlogic.gdx.graphics.Pixmap$Format,int,int,boolean)
+    149:165:public void dispose()
+    171:173:public void begin()
+    179:181:public void end()
+    184:188:private void addManagedFrameBuffer(com.badlogic.gdx.Application,com.badlogic.gdx.graphics.glutils.FrameBuffer)
+    224:224:public com.badlogic.gdx.graphics.Texture getColorBufferTexture()
+    231:231:public int getHeight()
+    238:238:public int getWidth()
+com.badlogic.gdx.graphics.glutils.ImmediateModeRenderer
+com.badlogic.gdx.graphics.glutils.IndexBufferObject:
+    127:127:public int getNumMaxIndices()
+    227:244:public void dispose()
+com.badlogic.gdx.graphics.glutils.IndexBufferObjectSubData:
+    92:102:public IndexBufferObjectSubData(int)
+    133:133:public int getNumMaxIndices()
+    242:259:public void dispose()
+com.badlogic.gdx.graphics.glutils.IndexData:
+    public abstract int getNumMaxIndices()
+    public abstract void dispose()
+com.badlogic.gdx.graphics.glutils.ShaderProgram:
+    271:275:public void setUniformi(java.lang.String,int,int)
+    287:291:public void setUniformi(java.lang.String,int,int,int)
+    304:308:public void setUniformi(java.lang.String,int,int,int,int)
+    318:322:public void setUniformf(java.lang.String,float)
+    333:337:public void setUniformf(java.lang.String,float,float)
+    349:353:public void setUniformf(java.lang.String,float,float,float)
+    366:370:public void setUniformf(java.lang.String,float,float,float,float)
+    373:380:public void setUniform1fv(java.lang.String,float[],int,int)
+    383:390:public void setUniform2fv(java.lang.String,float[],int,int)
+    393:400:public void setUniform3fv(java.lang.String,float[],int,int)
+    403:410:public void setUniform4fv(java.lang.String,float[],int,int)
+    448:449:public void setUniformMatrix(java.lang.String,com.badlogic.gdx.math.Matrix3)
+    460:466:public void setUniformMatrix(java.lang.String,com.badlogic.gdx.math.Matrix3,boolean)
+    481:485:public void setVertexAttribute(java.lang.String,int,int,boolean,int,java.nio.FloatBuffer)
+    530:536:public void dispose()
+    620:623:public void setAttributef(java.lang.String,float,float,float,float)
+    626:631:private void ensureBufferCapacity(int)
+com.badlogic.gdx.graphics.glutils.VertexArray:
+    84:84:public void dispose()
+    90:90:public java.nio.FloatBuffer getBuffer()
+    97:97:public int getNumVertices()
+    104:104:public int getNumMaxVertices()
+    196:196:public com.badlogic.gdx.graphics.VertexAttributes getAttributes()
+com.badlogic.gdx.graphics.glutils.VertexBufferObject:
+    120:120:public com.badlogic.gdx.graphics.VertexAttributes getAttributes()
+    127:127:public int getNumVertices()
+    134:134:public int getNumMaxVertices()
+    141:142:public java.nio.FloatBuffer getBuffer()
+    322:340:public void dispose()
+com.badlogic.gdx.graphics.glutils.VertexBufferObjectSubData:
+    119:119:public com.badlogic.gdx.graphics.VertexAttributes getAttributes()
+    126:126:public int getNumVertices()
+    133:133:public int getNumMaxVertices()
+    140:141:public java.nio.FloatBuffer getBuffer()
+    235:260:public void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram)
+    303:311:public void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram)
+    317:319:public void invalidate()
+    325:342:public void dispose()
+    349:349:public int getBufferHandle()
+com.badlogic.gdx.graphics.glutils.VertexData:
+    public abstract int getNumVertices()
+    public abstract int getNumMaxVertices()
+    public abstract com.badlogic.gdx.graphics.VertexAttributes getAttributes()
+    public abstract java.nio.FloatBuffer getBuffer()
+    public abstract void dispose()
+com.badlogic.gdx.input.RemoteInput
+com.badlogic.gdx.input.RemoteInput$EventTrigger
+com.badlogic.gdx.input.RemoteInput$KeyEvent
+com.badlogic.gdx.input.RemoteInput$TouchEvent
+com.badlogic.gdx.input.RemoteSender
+com.badlogic.gdx.math.CatmullRomSpline
+com.badlogic.gdx.math.Circle
+com.badlogic.gdx.math.EarClippingTriangulator
+com.badlogic.gdx.math.Frustum
+com.badlogic.gdx.math.Intersector
+com.badlogic.gdx.math.MathUtils:
+    public static final float PI
+    private static final int SIN_BITS
+    private static final int SIN_MASK
+    private static final int SIN_COUNT
+    private static final float radFull
+    private static final float degFull
+    private static final float radToIndex
+    private static final float degToIndex
+    public static final float radiansToDegrees
+    public static final float degreesToRadians
+    private static final int ATAN2_BITS
+    private static final int ATAN2_BITS2
+    private static final int ATAN2_MASK
+    private static final int ATAN2_COUNT
+    private static final int BIG_ENOUGH_INT
+    private static final double BIG_ENOUGH_FLOOR
+    private static final double CEIL
+    private static final double BIG_ENOUGH_ROUND
+    56:56:public static final float sin(float)
+    60:60:public static final float cos(float)
+    92:111:public static final float atan2(float,float)
+    126:126:public static final int random(int,int)
+    130:130:public static final boolean randomBoolean()
+    134:134:public static final float random()
+    138:138:public static final float random(float)
+    142:142:public static final float random(float,float)
+    175:175:public static int floor(float)
+    183:183:public static int floorPositive(float)
+    191:191:public static int ceil(float)
+    199:199:public static int ceilPositive(float)
+    207:207:public static int round(float)
+    214:214:public static int roundPositive(float)
+com.badlogic.gdx.math.Matrix3
+com.badlogic.gdx.math.Matrix4:
+    private static final long serialVersionUID
+    public static final int M00
+    public static final int M01
+    public static final int M02
+    public static final int M03
+    public static final int M10
+    public static final int M11
+    public static final int M12
+    public static final int M13
+    public static final int M20
+    public static final int M21
+    public static final int M22
+    public static final int M23
+    public static final int M30
+    public static final int M31
+    public static final int M32
+    public static final int M33
+    64:66:public Matrix4(com.badlogic.gdx.math.Matrix4)
+    72:74:public Matrix4(float[])
+    80:82:public Matrix4(com.badlogic.gdx.math.Quaternion)
+    128:154:public com.badlogic.gdx.math.Matrix4 set(com.badlogic.gdx.math.Quaternion)
+    167:183:public void set(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3)
+    189:189:public com.badlogic.gdx.math.Matrix4 cpy()
+    199:202:public com.badlogic.gdx.math.Matrix4 trn(com.badlogic.gdx.math.Vector3)
+    214:217:public com.badlogic.gdx.math.Matrix4 trn(float,float,float)
+    224:224:public float[] getValues()
+    275:291:public com.badlogic.gdx.math.Matrix4 tra()
+    325:384:public com.badlogic.gdx.math.Matrix4 inv()
+    391:391:public float det()
+    412:433:public com.badlogic.gdx.math.Matrix4 setToProjection(float,float,float,float)
+    464:465:public com.badlogic.gdx.math.Matrix4 setToOrtho2D(float,float,float,float,float,float)
+    519:523:public com.badlogic.gdx.math.Matrix4 setToTranslation(com.badlogic.gdx.math.Vector3)
+    536:540:public com.badlogic.gdx.math.Matrix4 setToTranslation(float,float,float)
+    552:559:public com.badlogic.gdx.math.Matrix4 setToTranslationAndScaling(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3)
+    576:583:public com.badlogic.gdx.math.Matrix4 setToTranslationAndScaling(float,float,float,float,float,float)
+    596:598:public com.badlogic.gdx.math.Matrix4 setToRotation(com.badlogic.gdx.math.Vector3,float)
+    611:613:public com.badlogic.gdx.math.Matrix4 setToRotation(float,float,float,float)
+    625:627:public com.badlogic.gdx.math.Matrix4 setFromEulerAngles(float,float,float)
+    637:641:public com.badlogic.gdx.math.Matrix4 setToScaling(com.badlogic.gdx.math.Vector3)
+    653:657:public com.badlogic.gdx.math.Matrix4 setToScaling(float,float,float)
+    673:688:public com.badlogic.gdx.math.Matrix4 setToLookAt(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3)
+    703:707:public com.badlogic.gdx.math.Matrix4 setToLookAt(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3)
+    715:720:public com.badlogic.gdx.math.Matrix4 setToWorld(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3)
+    738:740:public void lerp(com.badlogic.gdx.math.Matrix4,float)
+    747:763:public com.badlogic.gdx.math.Matrix4 set(com.badlogic.gdx.math.Matrix3)
+    767:770:public void scl(com.badlogic.gdx.math.Vector3)
+    773:776:public void getTranslation(com.badlogic.gdx.math.Vector3)
+    779:780:public void getRotation(com.badlogic.gdx.math.Quaternion)
+    public static native void mul(float[],float[])
+    public static native void mulVec(float[],float[])
+    public static native void mulVec(float[],float[],int,int,int)
+    public static native void prj(float[],float[])
+    public static native void prj(float[],float[],int,int,int)
+    public static native void rot(float[],float[])
+    public static native void rot(float[],float[],int,int,int)
+    public static native boolean inv(float[])
+    public static native float det(float[])
+com.badlogic.gdx.math.Plane
+com.badlogic.gdx.math.Plane$PlaneSide
+com.badlogic.gdx.math.Quaternion:
+    private static final long serialVersionUID
+    private static final float NORMALIZATION_TOLERANCE
+    59:61:public Quaternion(com.badlogic.gdx.math.Quaternion)
+    69:71:public Quaternion(com.badlogic.gdx.math.Vector3,float)
+    95:95:public com.badlogic.gdx.math.Quaternion set(com.badlogic.gdx.math.Quaternion)
+    106:109:public com.badlogic.gdx.math.Quaternion set(com.badlogic.gdx.math.Vector3,float)
+    116:116:public com.badlogic.gdx.math.Quaternion cpy()
+    123:123:public float len()
+    141:157:public com.badlogic.gdx.math.Quaternion setEulerAngles(float,float,float)
+    164:164:public float len2()
+    172:181:public com.badlogic.gdx.math.Quaternion nor()
+    190:193:public com.badlogic.gdx.math.Quaternion conjugate()
+    203:210:public void transform(com.badlogic.gdx.math.Vector3)
+    219:227:public com.badlogic.gdx.math.Quaternion mul(com.badlogic.gdx.math.Quaternion)
+    237:245:public com.badlogic.gdx.math.Quaternion mulLeft(com.badlogic.gdx.math.Quaternion)
+    255:281:public void toMatrix(float[])
+    289:289:public static com.badlogic.gdx.math.Quaternion idt()
+    301:301:public com.badlogic.gdx.math.Quaternion setFromAxis(com.badlogic.gdx.math.Vector3,float)
+    314:317:public com.badlogic.gdx.math.Quaternion setFromAxis(float,float,float,float)
+    327:327:public com.badlogic.gdx.math.Quaternion setFromMatrix(com.badlogic.gdx.math.Matrix4)
+    353:390:public com.badlogic.gdx.math.Quaternion setFromAxes(float,float,float,float,float,float,float,float,float)
+    402:440:public com.badlogic.gdx.math.Quaternion slerp(com.badlogic.gdx.math.Quaternion,float)
+    461:461:public float dot(com.badlogic.gdx.math.Quaternion)
+    471:475:public com.badlogic.gdx.math.Quaternion mul(float)
+com.badlogic.gdx.math.Rectangle:
+    private static final long serialVersionUID
+    public float x
+    public float y
+    public float width
+    public float height
+    42:47:public Rectangle(float,float,float,float)
+    53:58:public Rectangle(com.badlogic.gdx.math.Rectangle)
+    64:64:public float getX()
+    72:73:public void setX(float)
+    79:79:public float getY()
+    87:88:public void setY(float)
+    94:94:public float getWidth()
+    102:103:public void setWidth(float)
+    109:109:public float getHeight()
+    117:118:public void setHeight(float)
+    125:131:public boolean contains(com.badlogic.gdx.math.Rectangle)
+    140:140:public boolean overlaps(com.badlogic.gdx.math.Rectangle)
+    147:151:public void set(float,float,float,float)
+com.badlogic.gdx.math.Vector2
+com.badlogic.gdx.math.Vector3:
+    private static final long serialVersionUID
+    52:54:public Vector3(float,float,float)
+    61:63:public Vector3(com.badlogic.gdx.math.Vector3)
+    70:72:public Vector3(float[])
+    83:86:public com.badlogic.gdx.math.Vector3 set(float,float,float)
+    96:96:public com.badlogic.gdx.math.Vector3 set(com.badlogic.gdx.math.Vector3)
+    106:106:public com.badlogic.gdx.math.Vector3 set(float[])
+    113:113:public com.badlogic.gdx.math.Vector3 cpy()
+    122:122:public com.badlogic.gdx.math.Vector3 tmp()
+    131:131:public com.badlogic.gdx.math.Vector3 tmp2()
+    140:140:com.badlogic.gdx.math.Vector3 tmp3()
+    150:150:public com.badlogic.gdx.math.Vector3 add(com.badlogic.gdx.math.Vector3)
+    161:161:public com.badlogic.gdx.math.Vector3 add(float,float,float)
+    171:171:public com.badlogic.gdx.math.Vector3 add(float)
+    180:180:public com.badlogic.gdx.math.Vector3 sub(com.badlogic.gdx.math.Vector3)
+    192:192:public com.badlogic.gdx.math.Vector3 sub(float,float,float)
+    202:202:public com.badlogic.gdx.math.Vector3 sub(float)
+    212:212:public com.badlogic.gdx.math.Vector3 mul(float)
+    222:223:public com.badlogic.gdx.math.Vector3 div(float)
+    230:230:public float len()
+    237:237:public float len2()
+    245:245:public boolean idt(com.badlogic.gdx.math.Vector3)
+    253:261:public float dst(com.badlogic.gdx.math.Vector3)
+    270:273:public com.badlogic.gdx.math.Vector3 nor()
+    281:281:public float dot(com.badlogic.gdx.math.Vector3)
+    290:290:public com.badlogic.gdx.math.Vector3 crs(com.badlogic.gdx.math.Vector3)
+    301:301:public com.badlogic.gdx.math.Vector3 crs(float,float,float)
+    310:311:public com.badlogic.gdx.math.Vector3 mul(com.badlogic.gdx.math.Matrix4)
+    324:326:public com.badlogic.gdx.math.Vector3 prj(com.badlogic.gdx.math.Matrix4)
+    338:339:public com.badlogic.gdx.math.Vector3 rot(com.badlogic.gdx.math.Matrix4)
+    347:347:public boolean isUnit()
+    354:354:public boolean isZero()
+    366:368:public com.badlogic.gdx.math.Vector3 lerp(com.badlogic.gdx.math.Vector3,float)
+    380:394:public com.badlogic.gdx.math.Vector3 slerp(com.badlogic.gdx.math.Vector3,float)
+    413:413:public float dot(float,float,float)
+    424:432:public float dst2(com.badlogic.gdx.math.Vector3)
+    444:452:public float dst2(float,float,float)
+    456:456:public float dst(float,float,float)
+    493:496:public com.badlogic.gdx.math.Vector3 scale(float,float,float)
+com.badlogic.gdx.math.WindowedMean:
+    54:59:public void clear()
+    97:97:public float getOldest()
+    104:104:public float getLatest()
+    111:119:public float standardDeviation()
+com.badlogic.gdx.math.collision.BoundingBox
+com.badlogic.gdx.math.collision.Ray
+com.badlogic.gdx.math.collision.Segment
+com.badlogic.gdx.math.collision.Sphere
+com.badlogic.gdx.physics.box2d.Body
+com.badlogic.gdx.physics.box2d.BodyDef
+com.badlogic.gdx.physics.box2d.BodyDef$BodyType
+com.badlogic.gdx.physics.box2d.Box2DDebugRenderer
+com.badlogic.gdx.physics.box2d.CircleShape
+com.badlogic.gdx.physics.box2d.Contact
+com.badlogic.gdx.physics.box2d.ContactFilter
+com.badlogic.gdx.physics.box2d.ContactListener
+com.badlogic.gdx.physics.box2d.DestructionListener
+com.badlogic.gdx.physics.box2d.Filter
+com.badlogic.gdx.physics.box2d.Fixture
+com.badlogic.gdx.physics.box2d.FixtureDef
+com.badlogic.gdx.physics.box2d.Joint
+com.badlogic.gdx.physics.box2d.JointDef
+com.badlogic.gdx.physics.box2d.JointDef$JointType
+com.badlogic.gdx.physics.box2d.JointEdge
+com.badlogic.gdx.physics.box2d.MassData
+com.badlogic.gdx.physics.box2d.PolygonShape
+com.badlogic.gdx.physics.box2d.QueryCallback
+com.badlogic.gdx.physics.box2d.RayCastCallback
+com.badlogic.gdx.physics.box2d.Shape
+com.badlogic.gdx.physics.box2d.Shape$Type
+com.badlogic.gdx.physics.box2d.Transform
+com.badlogic.gdx.physics.box2d.World
+com.badlogic.gdx.physics.box2d.WorldManifold
+com.badlogic.gdx.physics.box2d.joints.DistanceJoint
+com.badlogic.gdx.physics.box2d.joints.DistanceJointDef
+com.badlogic.gdx.physics.box2d.joints.FrictionJoint
+com.badlogic.gdx.physics.box2d.joints.FrictionJointDef
+com.badlogic.gdx.physics.box2d.joints.GearJoint
+com.badlogic.gdx.physics.box2d.joints.GearJointDef
+com.badlogic.gdx.physics.box2d.joints.LineJoint
+com.badlogic.gdx.physics.box2d.joints.LineJointDef
+com.badlogic.gdx.physics.box2d.joints.MouseJoint
+com.badlogic.gdx.physics.box2d.joints.MouseJointDef
+com.badlogic.gdx.physics.box2d.joints.PrismaticJoint
+com.badlogic.gdx.physics.box2d.joints.PrismaticJointDef
+com.badlogic.gdx.physics.box2d.joints.PulleyJoint
+com.badlogic.gdx.physics.box2d.joints.PulleyJointDef
+com.badlogic.gdx.physics.box2d.joints.RevoluteJoint
+com.badlogic.gdx.physics.box2d.joints.RevoluteJointDef
+com.badlogic.gdx.physics.box2d.joints.WeldJoint
+com.badlogic.gdx.physics.box2d.joints.WeldJointDef
+com.badlogic.gdx.scenes.scene2d.Action
+com.badlogic.gdx.scenes.scene2d.Actor
+com.badlogic.gdx.scenes.scene2d.AnimationAction
+com.badlogic.gdx.scenes.scene2d.CompositeAction
+com.badlogic.gdx.scenes.scene2d.Group
+com.badlogic.gdx.scenes.scene2d.Interpolator
+com.badlogic.gdx.scenes.scene2d.Layout
+com.badlogic.gdx.scenes.scene2d.OnActionCompleted
+com.badlogic.gdx.scenes.scene2d.Stage
+com.badlogic.gdx.scenes.scene2d.TemporalAction
+com.badlogic.gdx.scenes.scene2d.actions.ActionResetingPool
+com.badlogic.gdx.scenes.scene2d.actions.Delay
+com.badlogic.gdx.scenes.scene2d.actions.Delay$1
+com.badlogic.gdx.scenes.scene2d.actions.FadeIn
+com.badlogic.gdx.scenes.scene2d.actions.FadeIn$1
+com.badlogic.gdx.scenes.scene2d.actions.FadeOut
+com.badlogic.gdx.scenes.scene2d.actions.FadeOut$1
+com.badlogic.gdx.scenes.scene2d.actions.FadeTo
+com.badlogic.gdx.scenes.scene2d.actions.FadeTo$1
+com.badlogic.gdx.scenes.scene2d.actions.Forever
+com.badlogic.gdx.scenes.scene2d.actions.Forever$1
+com.badlogic.gdx.scenes.scene2d.actions.MoveBy
+com.badlogic.gdx.scenes.scene2d.actions.MoveBy$1
+com.badlogic.gdx.scenes.scene2d.actions.MoveTo
+com.badlogic.gdx.scenes.scene2d.actions.MoveTo$1
+com.badlogic.gdx.scenes.scene2d.actions.Parallel
+com.badlogic.gdx.scenes.scene2d.actions.Parallel$1
+com.badlogic.gdx.scenes.scene2d.actions.Remove
+com.badlogic.gdx.scenes.scene2d.actions.Remove$1
+com.badlogic.gdx.scenes.scene2d.actions.Repeat
+com.badlogic.gdx.scenes.scene2d.actions.Repeat$1
+com.badlogic.gdx.scenes.scene2d.actions.RotateBy
+com.badlogic.gdx.scenes.scene2d.actions.RotateBy$1
+com.badlogic.gdx.scenes.scene2d.actions.RotateTo
+com.badlogic.gdx.scenes.scene2d.actions.RotateTo$1
+com.badlogic.gdx.scenes.scene2d.actions.ScaleTo
+com.badlogic.gdx.scenes.scene2d.actions.ScaleTo$1
+com.badlogic.gdx.scenes.scene2d.actions.Sequence
+com.badlogic.gdx.scenes.scene2d.actions.Sequence$1
+com.badlogic.gdx.scenes.scene2d.actors.BoundGroup
+com.badlogic.gdx.scenes.scene2d.actors.Button
+com.badlogic.gdx.scenes.scene2d.actors.Button$ClickListener
+com.badlogic.gdx.scenes.scene2d.actors.FastImage
+com.badlogic.gdx.scenes.scene2d.actors.Image
+com.badlogic.gdx.scenes.scene2d.actors.Label
+com.badlogic.gdx.scenes.scene2d.actors.Label$1
+com.badlogic.gdx.scenes.scene2d.actors.Label$VAlignment
+com.badlogic.gdx.scenes.scene2d.actors.Label$WrapType
+com.badlogic.gdx.scenes.scene2d.actors.LinearGroup
+com.badlogic.gdx.scenes.scene2d.actors.LinearGroup$LinearGroupLayout
+com.badlogic.gdx.scenes.scene2d.interpolators.AccelerateDecelerateInterpolator
+com.badlogic.gdx.scenes.scene2d.interpolators.AccelerateDecelerateInterpolator$1
+com.badlogic.gdx.scenes.scene2d.interpolators.AccelerateInterpolator
+com.badlogic.gdx.scenes.scene2d.interpolators.AccelerateInterpolator$1
+com.badlogic.gdx.scenes.scene2d.interpolators.AnticipateInterpolator
+com.badlogic.gdx.scenes.scene2d.interpolators.AnticipateInterpolator$1
+com.badlogic.gdx.scenes.scene2d.interpolators.DecelerateInterpolator
+com.badlogic.gdx.scenes.scene2d.interpolators.DecelerateInterpolator$1
+com.badlogic.gdx.scenes.scene2d.interpolators.LinearInterpolator
+com.badlogic.gdx.scenes.scene2d.interpolators.LinearInterpolator$1
+com.badlogic.gdx.scenes.scene2d.interpolators.OvershootInterpolator
+com.badlogic.gdx.scenes.scene2d.interpolators.OvershootInterpolator$1
+com.badlogic.gdx.utils.Array:
+    53:54:public Array(int)
+    72:75:public Array(boolean,int,java.lang.Class)
+    83:86:public Array(com.badlogic.gdx.utils.Array)
+    95:96:public void addAll(com.badlogic.gdx.utils.Array)
+    99:102:public void addAll(com.badlogic.gdx.utils.Array,int,int)
+    105:106:public void addAll(java.lang.Object[])
+    109:114:public void addAll(java.lang.Object[],int,int)
+    117:118:public java.lang.Object get(int)
+    122:124:public void set(int,java.lang.Object)
+    127:135:public void insert(int,java.lang.Object)
+    138:147:public boolean contains(java.lang.Object,boolean)
+    151:159:public int indexOf(java.lang.Object,boolean)
+    163:179:public boolean removeValue(java.lang.Object,boolean)
+    212:212:public java.lang.Object peek()
+    216:220:public void clear()
+    227:228:public void shrink()
+    236:238:public java.lang.Object[] ensureCapacity(int)
+    254:255:public void sort()
+    261:262:public void sort(java.util.Comparator)
+    265:271:public void reverse()
+    274:280:public void shuffle()
+com.badlogic.gdx.utils.AtomicQueue
+com.badlogic.gdx.utils.Base64Coder
+com.badlogic.gdx.utils.BufferUtils:
+    69:71:public static void copy(byte[],int,java.nio.Buffer,int)
+    86:88:public static void copy(short[],int,java.nio.Buffer,int)
+    103:105:public static void copy(char[],int,java.nio.Buffer,int)
+    120:122:public static void copy(int[],int,java.nio.Buffer,int)
+    137:139:public static void copy(long[],int,java.nio.Buffer,int)
+    154:156:public static void copy(float[],int,java.nio.Buffer,int)
+    171:173:public static void copy(double[],int,java.nio.Buffer,int)
+    189:192:public static void copy(java.nio.Buffer,java.nio.Buffer,int)
+    195:202:private static int positionInBytes(java.nio.Buffer)
+    206:213:private static int bytesToElements(java.nio.Buffer,int)
+    217:224:private static int elementsToBytes(java.nio.Buffer,int)
+    private static native void copyJni(byte[],int,java.nio.Buffer,int,int)
+    private static native void copyJni(char[],int,java.nio.Buffer,int,int)
+    private static native void copyJni(short[],int,java.nio.Buffer,int,int)
+    private static native void copyJni(int[],int,java.nio.Buffer,int,int)
+    private static native void copyJni(long[],int,java.nio.Buffer,int,int)
+    private static native void copyJni(float[],int,java.nio.Buffer,int,int)
+    private static native void copyJni(double[],int,java.nio.Buffer,int,int)
+    private static native void copyJni(java.nio.Buffer,int,java.nio.Buffer,int,int)
+    238:240:public static java.nio.FloatBuffer newFloatBuffer(int)
+    244:246:public static java.nio.DoubleBuffer newDoubleBuffer(int)
+    250:252:public static java.nio.ByteBuffer newByteBuffer(int)
+    256:258:public static java.nio.ShortBuffer newShortBuffer(int)
+    262:264:public static java.nio.CharBuffer newCharBuffer(int)
+    274:276:public static java.nio.LongBuffer newLongBuffer(int)
+com.badlogic.gdx.utils.ComparableTimSort
+com.badlogic.gdx.utils.Disposable
+com.badlogic.gdx.utils.FloatArray
+com.badlogic.gdx.utils.GdxRuntimeException:
+    private static final long serialVersionUID
+com.badlogic.gdx.utils.IdentityMap
+com.badlogic.gdx.utils.IdentityMap$Entries
+com.badlogic.gdx.utils.IdentityMap$Entry
+com.badlogic.gdx.utils.IdentityMap$Keys
+com.badlogic.gdx.utils.IdentityMap$MapIterator
+com.badlogic.gdx.utils.IdentityMap$Values
+com.badlogic.gdx.utils.IntArray
+com.badlogic.gdx.utils.IntMap
+com.badlogic.gdx.utils.IntMap$Entries
+com.badlogic.gdx.utils.IntMap$Entry
+com.badlogic.gdx.utils.IntMap$Keys
+com.badlogic.gdx.utils.IntMap$MapIterator
+com.badlogic.gdx.utils.IntMap$Values
+com.badlogic.gdx.utils.LittleEndianInputStream
+com.badlogic.gdx.utils.LongArray
+com.badlogic.gdx.utils.LongMap
+com.badlogic.gdx.utils.LongMap$Entries
+com.badlogic.gdx.utils.LongMap$Entry
+com.badlogic.gdx.utils.LongMap$Keys
+com.badlogic.gdx.utils.LongMap$MapIterator
+com.badlogic.gdx.utils.LongMap$Values
+com.badlogic.gdx.utils.ObjectMap:
+    private static final int PRIME1
+    private static final int PRIME2
+    private static final int PRIME3
+    private com.badlogic.gdx.utils.ObjectMap$Entries entries
+    private com.badlogic.gdx.utils.ObjectMap$Values values
+    private com.badlogic.gdx.utils.ObjectMap$Keys keys
+    66:67:public ObjectMap(int)
+    147:149:public void putAll(com.badlogic.gdx.utils.ObjectMap)
+    300:328:public java.lang.Object remove(java.lang.Object)
+    332:341:java.lang.Object removeStash(java.lang.Object)
+    346:354:void removeStashIndex(int)
+    357:365:public void clear()
+    372:384:public boolean containsValue(java.lang.Object,boolean)
+    388:397:public boolean containsKey(java.lang.Object)
+    401:404:private boolean containsKeyStash(java.lang.Object)
+    412:414:public void ensureCapacity(int)
+    482:486:public com.badlogic.gdx.utils.ObjectMap$Entries entries()
+    494:498:public com.badlogic.gdx.utils.ObjectMap$Values values()
+    506:510:public com.badlogic.gdx.utils.ObjectMap$Keys keys()
+com.badlogic.gdx.utils.ObjectMap$Entries
+com.badlogic.gdx.utils.ObjectMap$Entry
+com.badlogic.gdx.utils.ObjectMap$Keys
+com.badlogic.gdx.utils.ObjectMap$MapIterator
+com.badlogic.gdx.utils.ObjectMap$Values
+com.badlogic.gdx.utils.PauseableThread
+com.badlogic.gdx.utils.Pool:
+    38:39:public Pool(int)
+    73:75:public void free(com.badlogic.gdx.utils.Array)
+    81:82:public void clear()
+com.badlogic.gdx.utils.PooledLinkedList
+com.badlogic.gdx.utils.PooledLinkedList$1
+com.badlogic.gdx.utils.PooledLinkedList$Item
+com.badlogic.gdx.utils.ScreenUtils
+com.badlogic.gdx.utils.Sort
+com.badlogic.gdx.utils.TimSort
+com.badlogic.gdx.utils.Xml
+com.badlogic.gdx.utils.Xml$Element
+com.eightbitmage.gdxlw.LibdgxWallpaperApp
+com.eightbitmage.gdxlw.LibdgxWallpaperService:
+    public abstract android.service.wallpaper.WallpaperService$Engine onCreateEngine()
+com.pandacoder.MireaWallpaper.R
+com.pandacoder.MireaWallpaper.R$attr
+com.pandacoder.MireaWallpaper.R$dimen
+com.pandacoder.MireaWallpaper.R$drawable
+com.pandacoder.MireaWallpaper.R$string
+com.pandacoder.MireaWallpaper.R$xml
+com.pandacoder.MireaWallpaper.Shapes.Ring:
+    private static final int RING_QUOTE_APROXIMATION_PIECES
+    private static final int RING_APROXIMATION_PIECES
+    222:224:public void dispose()
+com.pandacoder.MireaWallpaper.WallpaperGraphicsEngine:
+    private static final java.lang.String LOG_TAG
+    private static final java.lang.String PREFS_NAME
+    private static final java.lang.String CIRCLES_RADIUS_ARRAY_PREFF_KEY
+    public static final int DEFAULT_FRAME_INTERVAL

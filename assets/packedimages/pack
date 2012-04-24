@@ -1,0 +1,26 @@
+
+input_dir1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+mireab
+  rotate: false
+  xy: 2, 2
+  size: 353, 181
+  orig: 353, 181
+  offset: 0, 0
+  index: -1
+miream
+  rotate: false
+  xy: 357, 2
+  size: 235, 120
+  orig: 235, 120
+  offset: 0, 0
+  index: -1
+mireas
+  rotate: false
+  xy: 357, 124
+  size: 156, 80
+  orig: 156, 80
+  offset: 0, 0
+  index: -1
