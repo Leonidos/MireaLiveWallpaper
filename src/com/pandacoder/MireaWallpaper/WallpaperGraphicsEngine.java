@@ -95,6 +95,10 @@ public class WallpaperGraphicsEngine implements ApplicationListener, LibdgxWallp
 		if (minScreenDim < 250) mireaTextureName = "mireas";
 		else if (minScreenDim < 370) mireaTextureName = "miream";  
 		mMireaLettering = atlas.createSprite(mireaTextureName);
+		// хоть и выводим текстуру пиксель в пиксель, всеравно ставим линейные фильтры,
+		// так как при прокручивании работчего стола текстура сдвигается на пол пикселя 
+		// например, и становится некрасиво... поэтому чтобы прокрутка была плавнее
+		// включаем филтры, чтботы текструа выглядела красиво
 		mMireaLettering.getTexture().setFilter(TextureFilter.Linear, TextureFilter.Linear);
 
 		mBg = new Texture(Gdx.files.internal("data/background.png"));

@@ -1,6 +1,7 @@
 bin/
 gen/
 doc/
+proguard/
 .metadata
 .settings
 .DS_Store
